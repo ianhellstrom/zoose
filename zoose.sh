@@ -1,4 +1,5 @@
 #!/bin/bash
+source conf.sh
 docker run --rm -it \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v $(pwd):$(pwd):consistent \
@@ -7,4 +8,4 @@ docker run --rm -it \
   -p 7473:7373 \
   -p 7474:7474 \
   -p 7687:7687 \
-  "databaseline/zoose:0.0.1"
+  "$DOCKER_IMAGE"
