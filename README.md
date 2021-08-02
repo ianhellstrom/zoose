@@ -22,7 +22,18 @@ What Jupyter is to Jupiter, Zoose is to Zeus.
 Execute `./zoose.sh`, which launches both a Jupyter notebooks session.
 Please use the link from the command line to access it, as it requires a token.
 
+If you do not want to `git clone` the repo, you can use the public Docker image:
+
+```bash
+docker run --rm -it \
+  -v $(pwd):$(pwd) -w $(pwd) 
+  -p 8888:8888 -p 7473:7373 -p 7474:7474 -p 7687:7687 
+  "databaseline/zoose:0.0.1"
+```
+
 # Neo4j
 
-Zoose also kicks off a Neo4j web server. 
+Zoose also kicks off a [Neo4j](https://neo4j.com) web server. 
 The UI is available at [localhost:7474](https://127.0.0.1:7474).
+Please check out [this value stream example](https://databaseline.tech/mapping-a-value-stream-in-neo4j/)
+to learn more about Neo4j and Cypher.
