@@ -9,13 +9,21 @@ What Jupyter is to Jupiter, Zoose is to Zeus.
 - Neo4j Community Edition 4.3
 - Python 3.9 
 - Jupyter 1.0 with Black
+
+Python packages:
+- Beautiful Soup 4.9
+- Keras 2.4
 - Matplotlib 3.4
+- NLTK 3.6
 - Numpy 1.21
 - Pandas 1.3 with Google BigQuery 0.15
-- Scikit-learn 0.24
+- Requests 2.26
 - SciPy 1.7
+- Scikit-learn 0.24
+- Scrapy 1.0
 - Seaborn 0.11
-- Statsmodels==0.12
+- StatsModels 0.12
+- spaCy 3.1
 
 # How to use?
 
