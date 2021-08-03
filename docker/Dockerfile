@@ -32,10 +32,29 @@ WORKDIR /setup
 COPY requirements.txt /setup/requirements.txt
 RUN pip install -r /setup/requirements.txt
 
-RUN jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip && \
+RUN jupyter contrib nbextension install && \
+    jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip && \
+    jupyter nbextension install --py latex_envs && \
+    jupyter nbextensions_configurator enable && \
+    jupyter nbextension enable latex_envs/latex_envs && \
+    jupyter nbextension enable cell_filter/cell_filter && \
+    jupyter nbextension enable code_font_size/code_font_size && \
+    jupyter nbextension enable code_folding/main && \
+    jupyter nbextension enable comment-uncomment/main && \
+    jupyter nbextension enable highligher/highlighter && \
+    jupyter nbextension enable rubberband/main && \
+    jupyter nbextension enable scratchpad/main && \
+    jupyter nbextension enable snippets/main && \
+    jupyter nbextension enable spellchecker/main && \
+    jupyter nbextension enable toc2/main && \
+    jupyter nbextension enable treefilter/index && \
+    jupyter nbextension enable varInspector/main && \
     jupyter nbextension enable jupyter-black-master/jupyter-black
 
+WORKDIR /app
+
 COPY neo4j.conf /etc/neo4j/neo4j.conf
+COPY snippets.json /usr/local/share/jupyter/nbextensions/snippets/snippets.json
 
 EXPOSE 7473
 EXPOSE 7474

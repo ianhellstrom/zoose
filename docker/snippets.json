@@ -1,0 +1,13 @@
+{
+  "snippets" : [
+    {
+      "name" : "Common imports",
+      "code" : [
+        "import numpy as np",
+        "import pandas as pd",
+        "import pandas_gbq as bq",
+        "import matplotlib.pyplot as plt"
+      ]
+    }
+  ]
+}
