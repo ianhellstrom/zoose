@@ -51,8 +51,6 @@ RUN jupyter contrib nbextension install && \
     jupyter nbextension enable varInspector/main && \
     jupyter nbextension enable jupyter-black-master/jupyter-black
 
-WORKDIR /app
-
 COPY neo4j.conf /etc/neo4j/neo4j.conf
 COPY snippets.json /usr/local/share/jupyter/nbextensions/snippets/snippets.json
 

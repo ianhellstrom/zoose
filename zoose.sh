@@ -1,9 +1,8 @@
 #!/bin/bash
 source conf.sh
 docker run --rm -it \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -v $(pwd):/app/$(pwd):consistent \
-  -w /app/$(pwd) \
+  -v $(pwd):$(pwd) \
+  -w $(pwd) \
   -p 8888:8888 \
   -p 7473:7373 \
   -p 7474:7474 \
