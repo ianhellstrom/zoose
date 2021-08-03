@@ -26,7 +26,7 @@
         "@param gcp_project_id: GCP project identifier",
         "@return: Pandas DataFrame with result set",
         "\"\"\"",
-        "canonical = re.sub(r\",\s+\", \" \", sql.strip())",
+        "canonical = re.sub(r\",\\s+\", \" \", sql.strip())",
         "return bq.read_bq(canonical, gcp_project_id)"
       ]
     }
