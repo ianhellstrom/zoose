@@ -34,9 +34,7 @@ RUN pip install -r /setup/requirements.txt
 
 RUN jupyter contrib nbextension install && \
     jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip && \
-    jupyter nbextension install --py latex_envs && \
     jupyter nbextensions_configurator enable && \
-    jupyter nbextension enable latex_envs/latex_envs && \
     jupyter nbextension enable cell_filter/cell_filter && \
     jupyter nbextension enable code_font_size/code_font_size && \
     jupyter nbextension enable code_folding/main && \
