@@ -4,31 +4,35 @@
       "name" : "Common imports",
       "code" : [
         "import re",
+        "import pytz as tz",
         "import numpy as np",
         "import pandas as pd",
         "import pandas_gbq as bq",
-        "import matplotlib.pyplot as plt"
+        "import matplotlib.pyplot as plt",
+        "",
+        "from datetime import datetime"
       ]
     },
     {
       "name" : "BigQuery",
       "code" : [
         "def query(sql: str, gcp_project_id: str) -> pd.DataFrame:",
-        "\"\"\"",
-        "Executes a BigQuery query.",
+        "    \"\"\"",
+        "    Executes a BigQuery query.",
         "",
-        "It converts each query into a canonical form to avoid",
-        "insignificant spaces being treated as different queries.",
-        "BigQuery hashes each query (as is) to determine whether",
-        "to use the cache or not.",
+        "    It converts each query into a canonical form to avoid",
+        "    insignificant spaces being treated as different queries.",
+        "    BigQuery hashes each query (as is) to determine whether",
+        "    to use the cache or not.",
         "",
-        "@param sql: SQL query to be executed",
-        "@param gcp_project_id: GCP project identifier",
-        "@return: Pandas DataFrame with result set",
-        "\"\"\"",
-        "canonical = re.sub(r\",\\s+\", \" \", sql.strip())",
-        "return bq.read_bq(canonical, gcp_project_id)"
+        "    @param sql: SQL query to be executed",
+        "    @param gcp_project_id: GCP project identifier",
+        "    @return: Pandas DataFrame with result set",
+        "    \"\"\"",
+        "    canonical = re.sub(r\",\\s+\", \" \", sql.strip())",
+        "    return bq.read_bq(canonical, gcp_project_id)"
       ]
     }
   ]
 }
+

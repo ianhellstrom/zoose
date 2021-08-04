@@ -38,6 +38,7 @@ RUN jupyter contrib nbextension install && \
     jupyter nbextension enable cell_filter/cell_filter && \
     jupyter nbextension enable code_font_size/code_font_size && \
     jupyter nbextension enable code_folding/main && \
+    jupyter nbextension enable --section edit codefolding/edit && \
     jupyter nbextension enable comment-uncomment/main && \
     jupyter nbextension enable highligher/highlighter && \
     jupyter nbextension enable rubberband/main && \
