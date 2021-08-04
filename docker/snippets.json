@@ -29,10 +29,12 @@
         "    @param gcp_project_id: GCP project identifier",
         "    @return: Pandas DataFrame with result set",
         "    \"\"\"",
+        "    conf = { 'query': { \"useQueryCache\": True } } ",
         "    canonical = re.sub(r\",\\s+\", \" \", sql.strip())",
-        "    return bq.read_bq(canonical, gcp_project_id)"
+        "    return bq.read_bq(canonical, gcp_project_id, configuration=conf)"
       ]
     }
   ]
 }
+
 
