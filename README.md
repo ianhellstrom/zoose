@@ -2,8 +2,9 @@
 
 > Jupyter is to Jupiter as Zoose is to Zeus.
 
-Zoose is a Docker container image for Jupyter notebooks pre-loaded with common Python packages
-as well as a Neo4j web server for graph analytics with Cypher.
+Zoose is a [Docker container image](https://hub.docker.com/repository/docker/databaseline/zoose) for
+Jupyter notebooks pre-loaded with common Python packages as well as a Neo4j web server for graph
+analytics with Cypher.
 Containerized notebooks with a standard set of packages make sharing and reproducing notebooks
 easier: no need for virtual environments and brittle configurations that break on Python upgrades.
 
