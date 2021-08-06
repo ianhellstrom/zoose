@@ -21,6 +21,7 @@ Python packages:
 - NLTK 3.6
 - Numpy 1.21
 - Pandas 1.3 with Google BigQuery 0.15
+- py2neo 2021.1.5
 - Requests 2.26
 - SciPy 1.7
 - Scikit-learn 0.24
