@@ -32,7 +32,7 @@
         "    \"\"\"",
         "    conf = { 'query': { \"useQueryCache\": True } } ",
         "    canonical = re.sub(r\",\\s+\", \" \", sql.strip())",
-        "    return bq.read_bq(canonical, gcp_project_id, configuration=conf)"
+        "    return bq.read_gbq(canonical, gcp_project_id, configuration=conf)"
       ]
     }
   ]
