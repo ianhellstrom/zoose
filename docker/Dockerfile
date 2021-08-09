@@ -53,6 +53,8 @@ RUN jupyter contrib nbextension install && \
 COPY neo4j.conf /etc/neo4j/neo4j.conf
 COPY snippets.json /usr/local/share/jupyter/nbextensions/snippets/snippets.json
 
+RUN mv /var/lib/neo4j/labs/apoc-4.3.0.0-core.jar /var/lib/neo4j/plugins/
+
 EXPOSE 7473
 EXPOSE 7474
 EXPOSE 7687
