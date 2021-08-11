@@ -50,3 +50,6 @@ Zoose also kicks off a [Neo4j](https://neo4j.com) web server.
 The UI is available at [localhost:7474](https://127.0.0.1:7474).
 Please check out [this value stream example](https://databaseline.tech/mapping-a-value-stream-in-neo4j/)
 to learn more about Neo4j and Cypher.
+
+If you use Neo4j, please ensure that your Docker container has at least 6GB of RAM allocated.
+This can be configured in the Docker client under 'Resources'.
