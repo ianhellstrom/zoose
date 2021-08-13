@@ -44,6 +44,13 @@ docker run --rm -it \
   "databaseline/zoose"
 ```
 
+Please ensure that the Docker container has sufficient resources.
+Go to _Docker Desktop > Preferences > Resources_ and set the number of CPUs to at least half of the
+total number available.
+Assign at least 4 GB of RAM to the container.
+Note that the Jupyter kernel may crash when loading large data sets (into memory).
+These settings apply to _all_ local containers.
+
 # Neo4j
 
 Zoose also kicks off a [Neo4j](https://neo4j.com) web server. 
