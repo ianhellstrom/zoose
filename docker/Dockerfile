@@ -35,20 +35,18 @@ RUN pip install -r /setup/requirements.txt
 RUN jupyter contrib nbextension install && \
     jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip && \
     jupyter nbextensions_configurator enable && \
-    jupyter nbextension enable cell_filter/cell_filter && \
     jupyter nbextension enable code_font_size/code_font_size && \
-    jupyter nbextension enable code_folding/main && \
+    jupyter nbextension enable codefolding/main && \
     jupyter nbextension enable --section edit codefolding/edit && \
     jupyter nbextension enable comment-uncomment/main && \
-    jupyter nbextension enable highligher/highlighter && \
     jupyter nbextension enable init_cell/main && \
     jupyter nbextension enable python-markdown/main && \
     jupyter nbextension enable rubberband/main && \
     jupyter nbextension enable scratchpad/main && \
+    jupyter nbextension enable skip-traceback/main && \
     jupyter nbextension enable snippets/main && \
     jupyter nbextension enable spellchecker/main && \
     jupyter nbextension enable toc2/main && \
-    jupyter nbextension enable treefilter/index && \
     jupyter nbextension enable varInspector/main && \
     jupyter nbextension enable jupyter-black-master/jupyter-black
 

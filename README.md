@@ -12,7 +12,7 @@ easier: no need for virtual environments and brittle configurations that break o
 
 - Neo4j Community Edition 4.3
 - Python 3.9 
-- Jupyter 1.0 with Black
+- Jupyter 1.0 with Black and lots of [extensions](#jupyter-extensions)
 
 Python packages:
 - Beautiful Soup 4.9
@@ -60,3 +60,33 @@ to learn more about Neo4j and Cypher.
 
 If you use Neo4j, please ensure that your Docker container has at least 6 GB of RAM allocated.
 This can be configured in the Docker client under 'Resources'.
+
+# Jupyter extensions
+The following [Jupyter extensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html)
+come pre-loaded with Zoose:
+
+- Black for cell auto-formatting
+- [Code folding](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html) with Alt-F
+- [Code font size](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_font_size/README.html)
+- [Comment/uncomment](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/comment-uncomment/readme.html) lines with Alt-C
+- [Configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator) for customization of extensions
+- [Initialization cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/init_cell/README.html), available in _View &rarr; Cell Toolbar &rarr; Initialization Cell_
+- Integrated [table of contents](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/toc2/README.html)
+- [Python in Markdown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html), as demonstrated in [notebook versioning](#notebook-versioning)
+- [Rubberband](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/rubberband/readme.html)
+- [Scratchpad](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scratchpad/README.html), accessible through the upward arrow at the bottom right (near the vertical scroll bar)
+- [Skip traceback](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skip-traceback/readme.html) to de-clutter the screen upon exceptions
+- [Snippets](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html), with a few snippets for common imports already pre-defined
+- [Spelling checker](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html)
+- [Variable inspector](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/varInspector/README.html)
+
+# Notebook versioning
+As of Zoose 0.1.5, please include the following line in each of your 
+_[trusted](https://jupyter-notebook.readthedocs.io/en/stable/security.html)_ notebooks:
+
+```md
+**This notebook has been created with Zoose {{ %env ZOOSE_VERSION }}**
+```
+
+Your readers will thank you, as they can now download the correct image to reproduce the notebook,
+provided they have the same access to data as you.
