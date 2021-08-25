@@ -81,7 +81,7 @@ come pre-loaded with Zoose:
 - [Variable inspector](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/varInspector/README.html)
 
 # Notebook versioning
-As of Zoose 0.1.5, please include the following line in each of your 
+As of Zoose 0.1.5, you can include the following line in each of your 
 _[trusted](https://jupyter-notebook.readthedocs.io/en/stable/security.html)_ notebooks:
 
 ```md
@@ -90,3 +90,5 @@ _[trusted](https://jupyter-notebook.readthedocs.io/en/stable/security.html)_ not
 
 Your readers will thank you, as they can now download the correct image to reproduce the notebook,
 provided they have the same access to data as you.
+Please note that any dynamic Markdown is _not_ rendered as text outside of the Jupyter environment
+(e.g. in GitHub).
