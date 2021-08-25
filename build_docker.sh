@@ -1,3 +1,3 @@
 #!/bin/bash
 source conf.sh
-docker build -t "$DOCKER_IMAGE" docker
+docker build --build-arg zoose_version=$ZOOSE_TAG -t "$DOCKER_IMAGE" docker
