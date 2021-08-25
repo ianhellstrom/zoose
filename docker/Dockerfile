@@ -41,6 +41,8 @@ RUN jupyter contrib nbextension install && \
     jupyter nbextension enable --section edit codefolding/edit && \
     jupyter nbextension enable comment-uncomment/main && \
     jupyter nbextension enable highligher/highlighter && \
+    jupyter nbextension enable init_cell/main && \
+    jupyter nbextension enable python-markdown/main && \
     jupyter nbextension enable rubberband/main && \
     jupyter nbextension enable scratchpad/main && \
     jupyter nbextension enable snippets/main && \
