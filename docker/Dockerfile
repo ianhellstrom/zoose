@@ -1,5 +1,7 @@
 FROM ubuntu:21.04
-LABEL org.opencontainers.image.authors="Ian Hellström"
+LABEL org.opencontainers.image.authors="Ian Hellström" \
+      org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
+      org.opencontainers.image.vendor="Databaseline"
 
 ENV PYTHON_VERSION="3.9"
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -19,7 +21,17 @@ RUN apt-get update && apt-get -y upgrade && \
         openjdk-11-jre \
         python${PYTHON_VERSION} \
         python${PYTHON_VERSION}-dev \
-        python${PYTHON_VERSION}-distutils
+        python${PYTHON_VERSION}-distutils \
+        libzmq3-dev \
+        libcurl4-openssl-dev \
+        libssl-dev \
+        libopenblas0-pthread \
+        jupyter-core \
+        jupyter-client \
+        r-base-* \
+        r-base-dev-* \
+        r-base-core-* \
+		    r-recommended-*
 RUN add-apt-repository -y universe && apt-get update && \
       apt-get install -y --no-install-recommends python3-pip && \
       ln -s /usr/bin/python${PYTHON_VERSION} /usr/bin/python && \
@@ -29,6 +41,8 @@ RUN wget -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && 
     apt-get update && apt-get install -y neo4j
 
 WORKDIR /setup
+COPY kernel.R /setup/kernel.R
+RUN R --vanilla < /setup/kernel.R
 COPY requirements.txt /setup/requirements.txt
 RUN pip install -r /setup/requirements.txt
 

@@ -11,7 +11,8 @@ easier: no need for virtual environments and brittle configurations that break o
 # What is included?
 
 - Neo4j Community Edition 4.3
-- Python 3.9 
+- Python 3.9
+- R 4.0.4
 - Jupyter 1.0 with Black and lots of [extensions](#jupyter-extensions)
 
 Python packages:
@@ -29,6 +30,16 @@ Python packages:
 - Seaborn 0.11
 - StatsModels 0.12
 - spaCy 3.1
+
+R packages:
+- arrow
+- bigrquery
+- caret
+  lubridate
+- randomForest
+- reshape
+- tidymodels 
+- tidyverse 
 
 # How to use?
 
@@ -82,7 +93,7 @@ come pre-loaded with Zoose:
 
 # Notebook versioning
 As of Zoose 0.1.5, you can include the following line in each of your 
-_[trusted](https://jupyter-notebook.readthedocs.io/en/stable/security.html)_ notebooks:
+_[trusted](https://jupyter-notebook.readthedocs.io/en/stable/security.html)_ Python notebooks:
 
 ```md
 **This notebook has been created with Zoose {{ %env ZOOSE_VERSION }}**
