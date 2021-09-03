@@ -89,7 +89,6 @@ come pre-loaded with Zoose:
 - [Skip traceback](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skip-traceback/readme.html) to de-clutter the screen upon exceptions
 - [Snippets](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html), with a few snippets for common imports already pre-defined
 - [Spelling checker](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html)
-- [Variable inspector](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/varInspector/README.html)
 
 # Notebook versioning
 As of Zoose 0.1.5, you can include the following line in each of your 

@@ -61,7 +61,6 @@ RUN jupyter contrib nbextension install && \
     jupyter nbextension enable snippets/main && \
     jupyter nbextension enable spellchecker/main && \
     jupyter nbextension enable toc2/main && \
-    jupyter nbextension enable varInspector/main && \
     jupyter nbextension enable jupyter-black-master/jupyter-black
 
 COPY neo4j.conf /etc/neo4j/neo4j.conf
