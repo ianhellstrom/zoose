@@ -3,5 +3,14 @@ install.packages(c("repr", "IRdisplay", "IRkernel"), type = "source")
 
 IRkernel::installspec(user = FALSE)
 
-libs = c("bigrquery", "arrow", "tidyverse", "tidymodels", "lubridate", "randomForest", "caret", "reshape")
+libs = c(
+    "arrow",
+    "bigrquery",
+    "caret",
+    "lubridate",
+    "randomForest",
+    "reshape",
+    "tidyverse",
+    "tidymodels"
+    )
 install.packages(libs, type = "source")
