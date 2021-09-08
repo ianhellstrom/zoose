@@ -31,7 +31,7 @@ RUN apt-get update && apt-get -y upgrade && \
         r-base-* \
         r-base-dev-* \
         r-base-core-* \
-		    r-recommended-*
+        r-recommended-*
 RUN add-apt-repository -y universe && apt-get update && \
       apt-get install -y --no-install-recommends python3-pip && \
       ln -s /usr/bin/python${PYTHON_VERSION} /usr/bin/python && \
@@ -42,6 +42,7 @@ RUN wget -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && 
 
 WORKDIR /setup
 COPY kernel.R /setup/kernel.R
+ENV LIBARROW_MINIMAL="false"
 RUN R --vanilla < /setup/kernel.R
 COPY requirements.txt /setup/requirements.txt
 RUN pip install -r /setup/requirements.txt
