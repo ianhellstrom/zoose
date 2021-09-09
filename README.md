@@ -1,3 +1,5 @@
+[![Docker Image CI](https://github.com/ianhellstrom/zoose/actions/workflows/docker-image.yml/badge.svg?branch=master)](https://github.com/ianhellstrom/zoose/actions/workflows/docker-image.yml)
+
 # What is Zoose?
 
 > Jupyter is to Jupiter as Zoose is to Zeus.
