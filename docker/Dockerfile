@@ -39,7 +39,8 @@ RUN add-apt-repository -y universe && apt-get update && \
 RUN set -o pipefail && \
     wget -q -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \
     echo 'deb https://debian.neo4j.com stable 4.3' | tee -a /etc/apt/sources.list.d/neo4j.list && \
-    apt-get update && apt-get install -y --no-install-recommends neo4j
+    apt-get update && apt-get install -y --no-install-recommends neo4j && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /setup
 COPY kernel.R /setup/kernel.R

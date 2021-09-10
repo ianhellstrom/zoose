@@ -2,9 +2,11 @@ failure-threshold: error
 override:
   info:
     - DL3008
-    - DL3059
 ignored:
+  - DL3008
+  - DL3009
   - DL3013
+  - DL3059
 trustedRegistries:
   - docker.io
   - gcr.io
