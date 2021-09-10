@@ -1,7 +1,8 @@
 failure-threshold: error
-info:
-  - DL3008
-  - DL3059
+override:
+  info:
+    - DL3008
+    - DL3059
 ignored:
   - DL3013
 trustedRegistries:
