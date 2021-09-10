@@ -1,4 +1,4 @@
-[![Docker Image CI](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml/badge.svg?branch=master)](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml)
+[![CI/CD](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml/badge.svg?branch=master)](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml)
 
 # What is Zoose?
 
