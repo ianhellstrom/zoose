@@ -36,16 +36,17 @@ RUN add-apt-repository -y universe && apt-get update && \
       apt-get install -y --no-install-recommends python3-pip && \
       ln -s /usr/bin/python${PYTHON_VERSION} /usr/bin/python && \
       rm -rf /var/lib/apt/lists/*
-RUN wget -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \
+RUN set -o pipefail && \
+    wget -q -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \
     echo 'deb https://debian.neo4j.com stable 4.3' | tee -a /etc/apt/sources.list.d/neo4j.list && \
-    apt-get update && apt-get install -y neo4j
+    apt-get update && apt-get install -y --no-install-recommends neo4j
 
 WORKDIR /setup
 COPY kernel.R /setup/kernel.R
 ENV LIBARROW_MINIMAL="false"
 RUN R --vanilla < /setup/kernel.R
 COPY requirements.txt /setup/requirements.txt
-RUN pip install -r /setup/requirements.txt
+RUN pip install --no-cache-dir -r /setup/requirements.txt
 
 RUN jupyter contrib nbextension install && \
     jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip && \
