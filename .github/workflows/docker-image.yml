@@ -7,15 +7,12 @@ on:
     branches: [ master ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Log in to Docker Hub
-      run: echo ${{secrets.DOCKERHUB_PASSWORD}} | docker login --username ${{secrets.DOCKERHUB_USER}} --password-stdin
+      run: docker login -u ${{secrets.DOCKERHUB_USER}} -p ${{secrets.DOCKERHUB_PASSWORD}}
     - name: Build the Docker image
       run: ./build_docker.sh
     - name: Push the image to Docker Hub
