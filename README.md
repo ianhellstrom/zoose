@@ -1,4 +1,5 @@
-[![CI/CD](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml/badge.svg?branch=master)](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml)
+[![CI: Master](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml/badge.svg?branch=master)](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml)
+[![CI: PR](https://github.com/ianhellstrom/zoose/actions/workflows/pull.yml/badge.svg?branch=master)](https://github.com/ianhellstrom/zoose/actions/workflows/pull.yml)
 
 # What is Zoose?
 
