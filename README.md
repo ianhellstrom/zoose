@@ -46,7 +46,7 @@ R packages:
 
 # How to use?
 
-Execute `./zoose.sh`, which launches both a Jupyter notebooks session.
+Execute `./zoose.sh`, which launches a Jupyter notebooks session.
 Please use the link from the command line to access it, as it requires a token.
 
 If you do not want to `git clone` the repo, you can use the public Docker image:
