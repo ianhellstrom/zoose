@@ -20,6 +20,7 @@ easier: no need for virtual environments and brittle configurations that break o
 
 Python packages:
 - Beautiful Soup 4.9
+- Gower 0.0.5
 - Keras 2.4
 - Matplotlib 3.4
 - NLTK 3.6
