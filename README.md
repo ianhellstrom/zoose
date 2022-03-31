@@ -65,6 +65,10 @@ Assign at least 4 GB of RAM to the container.
 Note that the Jupyter kernel may crash when loading large data sets (into memory).
 These settings apply to _all_ local containers.
 
+If you use Zoose with BigQuery often, you may want to preserve credentials.
+You can do so by adding `-v $(pwd)/.config:/root/.config/pandas_gbq/` to the command above.
+Just make sure you ignore `.config` and do not share your personal credentials in a git repository!
+
 # Neo4j
 
 Zoose also kicks off a [Neo4j](https://neo4j.com) web server. 
