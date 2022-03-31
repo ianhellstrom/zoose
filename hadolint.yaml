@@ -7,6 +7,7 @@ ignored:
   - DL3009
   - DL3013
   - DL3059
+  - DL4006
 trustedRegistries:
   - docker.io
   - gcr.io
