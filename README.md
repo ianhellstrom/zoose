@@ -16,7 +16,7 @@ easier: no need for virtual environments and brittle configurations that break o
 - Neo4j Community Edition 4.3
 - Python 3.9
 - R 4.0.4
-- Jupyter 1.0 with Black and lots of [extensions](#jupyter-extensions)
+- Jupyter Lab 3.3.4 with extensions
 
 Python packages:
 - Beautiful Soup 4.9
@@ -80,33 +80,32 @@ to learn more about Neo4j and Cypher.
 If you use Neo4j, please ensure that your Docker container has at least 6 GB of RAM allocated.
 This can be configured in the Docker client under 'Resources'.
 
-# Jupyter extensions
-The following [Jupyter extensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html)
-come pre-loaded with Zoose:
+# What is new?
+As of 1.0.0, Zoose is based on JupyterLab instead of the classic Jupyter experience.
+This means, among others, that it offers code completion, refactoring capabilities, autoformatting, 
+and git integration (incl. diffs) out of the box.
 
-- Black for cell auto-formatting
-- [Code folding](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html) with Alt-F
-- [Code font size](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_font_size/README.html)
-- [Comment/uncomment](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/comment-uncomment/readme.html) lines with Alt-C
-- [Configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator) for customization of extensions
-- [Initialization cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/init_cell/README.html), available in _View &rarr; Cell Toolbar &rarr; Initialization Cell_
-- Integrated [table of contents](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/toc2/README.html)
-- [Python in Markdown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html), as demonstrated in [notebook versioning](#notebook-versioning)
-- [Rubberband](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/rubberband/readme.html)
-- [Scratchpad](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scratchpad/README.html), accessible through the upward arrow at the bottom right (near the vertical scroll bar)
-- [Skip traceback](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skip-traceback/readme.html) to de-clutter the screen upon exceptions
-- [Snippets](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html), with a few snippets for common imports already pre-defined
-- [Spelling checker](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html)
+## Deprecations
+### Scratchpad
+If you relied on the [scratchpad extension](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scratchpad/README.html), 
+that is not available any longer because of the migration to JupyterLab.
+You can, however, have a similar experience with JupyterLab, too.
+Just open a Python console and share the notebook kernel with the console (Kernel &rarr; Change Kernel...).
+That way, you can reference objects from the notebook in the JupyterLab console.
 
-# Notebook versioning
-As of Zoose 0.1.5, you can include the following line in each of your 
-_[trusted](https://jupyter-notebook.readthedocs.io/en/stable/security.html)_ Python notebooks:
+### Initialization cells
+[Initialization cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/init_cell/README.html)
+are gone, as these are [not supported](https://github.com/jupyterlab/jupyterlab/issues/7620) by
+JupyterLab.
+[Scenes](https://github.com/schmidi314/jupyterlab-scenes), a partial replacement, is included, 
+although there is no automatic migration path available.
 
-```md
-**This notebook has been created with Zoose {{ %env ZOOSE_VERSION }}**
-```
+### Dynamic markdown
+[Dynamic markdown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html)
+has been deprecated.
+It did not render properly outside JupyterLab in, say, GitHub anyway.
+No replacement is available or planned.
 
-Your readers will thank you, as they can now download the correct image to reproduce the notebook,
-provided they have the same access to data as you.
-Please note that any dynamic Markdown is _not_ rendered as text outside of the Jupyter environment
-(e.g. in GitHub).
+### Snippets
+[Snippets](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html) are gone.
+A [replacement](https://github.com/QuantStack/jupyterlab-snippets) is not planned for inclusion.
