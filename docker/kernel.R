@@ -11,6 +11,7 @@ libs = c(
     "randomForest",
     "reshape",
     "tidyverse",
-    "tidymodels"
+    "tidymodels",
+    "languageserver"
     )
 install.packages(libs, type = "source")

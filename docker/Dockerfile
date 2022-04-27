@@ -28,6 +28,7 @@ RUN apt-get update && apt-get -y upgrade && \
         libopenblas0-pthread \
         jupyter-core \
         jupyter-client \
+        git \
         r-base-* \
         r-base-dev-* \
         r-base-core-* \
@@ -49,25 +50,10 @@ RUN R --vanilla < /setup/kernel.R
 COPY requirements.txt /setup/requirements.txt
 RUN pip install --no-cache-dir -r /setup/requirements.txt
 
-RUN jupyter contrib nbextension install && \
-    jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip && \
-    jupyter nbextensions_configurator enable && \
-    jupyter nbextension enable code_font_size/code_font_size && \
-    jupyter nbextension enable codefolding/main && \
-    jupyter nbextension enable --section edit codefolding/edit && \
-    jupyter nbextension enable comment-uncomment/main && \
-    jupyter nbextension enable init_cell/main && \
-    jupyter nbextension enable python-markdown/main && \
-    jupyter nbextension enable rubberband/main && \
-    jupyter nbextension enable scratchpad/main && \
-    jupyter nbextension enable skip-traceback/main && \
-    jupyter nbextension enable snippets/main && \
-    jupyter nbextension enable spellchecker/main && \
-    jupyter nbextension enable toc2/main && \
-    jupyter nbextension enable jupyter-black-master/jupyter-black
-
 COPY neo4j.conf /etc/neo4j/neo4j.conf
-COPY snippets.json /usr/local/share/jupyter/nbextensions/snippets/snippets.json
+COPY disclaimer.json /root/.jupyter/lab/user-settings/@jupyterlab/extensionmanager-extension/plugin.jupyterlab-settings
+COPY lsp.json /root/.jupyter/lab/user-settings/@krassowski/jupyterlab-lsp/plugin.jupyterlab-settings
+COPY pycodestyle /root/.config/pycodestyle
 
 ARG zoose_version
 ENV ZOOSE_VERSION $zoose_version
