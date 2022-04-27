@@ -95,11 +95,10 @@ That way, you can reference objects from the notebook in the JupyterLab console.
 
 ### Initialization cells
 [Initialization cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/init_cell/README.html)
-are gone, as these are [not supported](https://github.com/jupyterlab/jupyterlab/issues/7620) by
-JupyterLab.
-[Scenes](https://github.com/schmidi314/jupyterlab-scenes) is included, which provides an automatic
-translation to a 'Legacy Init' scene that corresponds to the original initialization cells.
-Note that scenes are not run upon opening a (trusted) notebook, though.
+have been replaced by [Scenes](https://github.com/schmidi314/jupyterlab-scenes).
+Scenes provide an automatic translation to a 'Legacy Init' scene that corresponds to the original 
+initialization cells.
+Note that scenes are not run upon opening a (trusted) notebook.
 
 ### Dynamic markdown
 [Dynamic markdown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html)
