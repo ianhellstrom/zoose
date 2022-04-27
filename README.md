@@ -16,7 +16,7 @@ easier: no need for virtual environments and brittle configurations that break o
 - Neo4j Community Edition 4.3
 - Python 3.9
 - R 4.0.4
-- Jupyter Lab 3.3.4 with extensions
+- JupyterLab 3.3.4 with extensions
 
 Python packages:
 - Beautiful Soup 4.9
