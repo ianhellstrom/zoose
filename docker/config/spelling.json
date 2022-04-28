@@ -1,0 +1,9 @@
+{
+  "theme": "background-box",
+  "language": "en_GBz-custom",
+  "ignore": [
+    "JupyterLab",
+    "Jupyter",
+    "Zoose"
+  ]
+}
