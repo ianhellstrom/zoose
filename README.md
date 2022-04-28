@@ -83,7 +83,8 @@ This can be configured in the Docker client under 'Resources'.
 # What is new?
 As of 1.0.0, Zoose is based on JupyterLab instead of the classic Jupyter experience.
 This means, among others, that it offers code completion, refactoring capabilities, autoformatting, 
-and git integration (incl. diffs) out of the box.
+an OED-recommended spelling checker with support for technical terms, and git integration (incl.
+diffs) out of the box.
 
 ## Deprecations
 ### Scratchpad

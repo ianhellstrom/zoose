@@ -50,10 +50,16 @@ RUN R --vanilla < /setup/kernel.R
 COPY requirements.txt /setup/requirements.txt
 RUN pip install --no-cache-dir -r /setup/requirements.txt
 
-COPY neo4j.conf /etc/neo4j/neo4j.conf
-COPY disclaimer.json /root/.jupyter/lab/user-settings/@jupyterlab/extensionmanager-extension/plugin.jupyterlab-settings
-COPY lsp.json /root/.jupyter/lab/user-settings/@krassowski/jupyterlab-lsp/plugin.jupyterlab-settings
-COPY pycodestyle /root/.config/pycodestyle
+COPY config/neo4j.conf /etc/neo4j/neo4j.conf
+COPY dictionaries /usr/local/share/jupyter/dictionaries/
+COPY config/extensions.json /root/.jupyter/lab/user-settings/@jupyterlab/extensionmanager-extension/plugin.jupyterlab-settings
+COPY config/completion.json /root/.jupyter/lab/user-settings/@krassowski/jupyterlab-lsp/completion.jupyterlab-settings
+COPY config/lsp.json /root/.jupyter/lab/user-settings/@krassowski/jupyterlab-lsp/plugin.jupyterlab-settings
+COPY config/spelling.json /root/.jupyter/lab/user-settings/@ijmbarr/jupyterlab_spellchecker/plugin.jupyterlab-settings
+COPY config/format.json /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter/plugin.jupyterlab-settings
+COPY config/format.json /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter/settings.jupyterlab-settings
+COPY config/traceback.json /root/.jupyter/lab/user-settings/jupyterlab-skip-traceback/settings.jupyterlab-settings
+COPY config/pycodestyle /root/.config/pycodestyle
 
 ARG zoose_version
 ENV ZOOSE_VERSION $zoose_version

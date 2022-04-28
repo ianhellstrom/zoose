@@ -6,12 +6,6 @@
         "pyls.plugins.pyflakes.enabled": false,
         "pyls.plugins.flake8.enabled": true
       }
-    },
-    "r-languageserver": {
-      "serverSettings": {
-        "r.lsp.debug": false,
-        "r.lsp.diagnostics": false
-      }
     }
   }
 }
