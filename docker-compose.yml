@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  base:
+    image: zoose-base
+    build:
+      context: base
+      dockerfile: Dockerfile
+      args:
+        version: 2.0.0
+    entrypoint: /jupyter.sh
+    ports:
+      - 8888:8888
+  neo4j:
+    build:
+      context: neo4j
+      dockerfile: Dockerfile
+    entrypoint: /neo4j.sh
+    ports:
+      - 7474:7474
+      - 7687:7686
+  r:
+    build:
+      context: r
+      dockerfile: Dockerfile
+    entrypoint: /jupyter.sh
+  quantum:
+    build:
+      context: quantum
+      dockerfile: Dockerfile
+    entrypoint: /jupyter.sh
