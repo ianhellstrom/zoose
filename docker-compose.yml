@@ -25,10 +25,10 @@ services:
       dockerfile: Dockerfile
       args:
         BASE: "${BASE}:${TAG}"
-  r:
-    image: "${PREFIX}-r:${TAG}"
-    build:
-      context: r
-      dockerfile: Dockerfile
-      args:
-        BASE: "${BASE}:${TAG}"
+#  r:
+#    image: "${PREFIX}-r:${TAG}"
+#    build:
+#      context: r
+#      dockerfile: Dockerfile
+#      args:
+#        BASE: "${BASE}:${TAG}"

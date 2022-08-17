@@ -15,5 +15,3 @@ libs = c(
     "languageserver"
     )
 install.packages(libs, type = "source")
-
-jupyter labextension install @techrah/text-shortcuts
