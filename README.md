@@ -43,10 +43,14 @@ Zoose Neo4j includes everything from Zoose Base as well as:
 
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:
+- Amazon Braket SDK 1.29
 - Cirq 1.0
 - cuQuantum 22.7
-- PennyLane 0.25 with Cirq, Stawberry Fields, and Qiskit plugins
+- OpenFermion 1.5
+- PennyLane 0.25 with plugins for Cirq, Stawberry Fields, Qiskit
+- pytket 1.5
 - Qiskit 0.37
+- QuTiP 4.7
 - Strawberry Fields 0.23
 
 ### Zoose R (temporarily disabled)
