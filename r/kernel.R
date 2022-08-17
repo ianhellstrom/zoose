@@ -1,5 +1,5 @@
 options(repos=structure(c(CRAN="cran.rstudio.com/")))
-install.packages(c("repr", "IRdisplay", "IRkernel"), type = "source")
+install.packages(c('repr', 'IRdisplay', 'IRkernel'), type = 'source')
 
 IRkernel::installspec(user = FALSE)
 
@@ -15,3 +15,5 @@ libs = c(
     "languageserver"
     )
 install.packages(libs, type = "source")
+
+jupyter labextension install @techrah/text-shortcuts

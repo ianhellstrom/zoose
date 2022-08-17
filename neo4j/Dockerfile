@@ -1,6 +1,8 @@
-FROM zoose-base
+ARG BASE
+
+FROM ${BASE}
 LABEL org.opencontainers.image.authors="Ian Hellström" \
-      org.opencontainers.image.source="https://github.com/ianhellstrom/zoose-neo4j" \
+      org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
       org.opencontainers.image.vendor="Databaseline"
 
 RUN set -o pipefail && \
@@ -15,4 +17,9 @@ RUN pip install --no-cache-dir -r /setup/requirements.txt
 
 COPY config/neo4j.conf /etc/neo4j/neo4j.conf
 
+EXPOSE 7473
+EXPOSE 7474
+EXPOSE 7687
+
 COPY neo4j.sh /neo4j.sh
+ENTRYPOINT ["/neo4j.sh"]

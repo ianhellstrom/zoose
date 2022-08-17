@@ -1,30 +1,34 @@
 version: "3.9"
 services:
   base:
-    image: zoose-base
+    image: "${BASE}:${TAG}"
     build:
       context: base
       dockerfile: Dockerfile
-      args:
-        version: 2.0.0
-    entrypoint: /jupyter.sh
     ports:
-      - 8888:8888
+      - "8888:8888"
   neo4j:
+    image: "${PREFIX}-neo4j:${TAG}"
     build:
       context: neo4j
       dockerfile: Dockerfile
-    entrypoint: /neo4j.sh
+      args:
+        BASE: "${BASE}:${TAG}"
     ports:
-      - 7474:7474
-      - 7687:7686
-  r:
-    build:
-      context: r
-      dockerfile: Dockerfile
-    entrypoint: /jupyter.sh
+      - "7473:7373"
+      - "7474:7474"
+      - "7687:7686"
   quantum:
+    image: "${PREFIX}-quantum:${TAG}"
     build:
       context: quantum
       dockerfile: Dockerfile
-    entrypoint: /jupyter.sh
+      args:
+        BASE: "${BASE}:${TAG}"
+  r:
+    image: "${PREFIX}-r:${TAG}"
+    build:
+      context: r
+      dockerfile: Dockerfile
+      args:
+        BASE: "${BASE}:${TAG}"

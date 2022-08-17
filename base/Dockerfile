@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 LABEL org.opencontainers.image.authors="Ian Hellström" \
-      org.opencontainers.image.source="https://github.com/ianhellstrom/zoose-base" \
+      org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
       org.opencontainers.image.vendor="Databaseline"
 
 ENV PYTHON_VERSION="3.10"
@@ -48,4 +48,7 @@ COPY config/format.json /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_
 COPY config/traceback.json /root/.jupyter/lab/user-settings/jupyterlab-skip-traceback/settings.jupyterlab-settings
 COPY config/pycodestyle /root/.config/pycodestyle
 
+EXPOSE 8888
+
 COPY jupyter.sh /jupyter.sh
+ENTRYPOINT ["/jupyter.sh"]

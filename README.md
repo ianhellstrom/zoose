@@ -11,32 +11,47 @@ analytics with Cypher.
 Containerized notebooks with a standard set of packages make sharing and reproducing notebooks
 easier: no need for virtual environments and brittle configurations that break on Python upgrades.
 
-# What is included?
+## Flavours
+Zoose comes in a few flavours: `base`, `neo4j`, and `quantum`.
+What is included in `base` is always included in the rest, too.
 
-- Neo4j Community Edition 4.3
-- Python 3.9
-- R 4.0.4
-- JupyterLab 3.3.4 with extensions
+### Zoose Base
+- Python 3.10
+- JupyterLab 3.4.5 with extensions
 
 Python packages:
-- Beautiful Soup 4.9
+- Beautiful Soup 4.11
 - Gower 0.0.5
-- Keras 2.4
-- Matplotlib 3.4
-- NLTK 3.6
-- Numpy 1.21
-- Pandas 1.3 with Google BigQuery 0.15
-- Prince 0.7.1  
-- py2neo 2021.1.5
-- Requests 2.26
-- SciPy 1.7
-- Scikit-learn 0.24
+- Keras 2.9
+- Matplotlib 3.5
+- NLTK 3.7
+- Numpy 1.23
+- Pandas 1.4 with Google BigQuery 0.17
+- Prince 0.7  
+- Requests 2.28
+- SciPy 1.9
+- Scikit-learn 1.1
 - Scrapy 1.0
 - Seaborn 0.11
-- StatsModels 0.12
-- spaCy 3.1
+- StatsModels 0.13
+- spaCy 3.4
 
-R packages:
+### Zoose Neo4j
+Zoose Neo4j includes everything from Zoose Base as well as:
+- Neo4j Community Edition 4.4
+- py2neo 2021.2.3
+
+### Zoose Quantum
+Zoose Quantum includes everything from Zoose Base as well as:
+- Cirq 1.0
+- cuQuantum 22.7
+- PennyLane 0.25 with Cirq, Stawberry Fields, and Qiskit plugins
+- Qiskit 0.37
+- Strawberry Fields 0.23
+
+### Zoose R (temporarily disabled)
+Zoose R includes everything from Zoose Base as well as:
+- R 4.1.2
 - arrow
 - bigrquery
 - caret
@@ -47,17 +62,19 @@ R packages:
 - tidyverse 
 
 # How to use?
-
 Execute `./zoose.sh`, which launches a Jupyter notebooks session.
+By default it launches Zoose Base.
+If you want Neo4j or Quantum, just use `./zoose.sh neo4j` or `./zoose.sh quantum` instead.
+
 Please use the link from the command line to access it, as it requires a token.
 
 If you do not want to `git clone` the repo, you can use the public Docker image:
 
 ```bash
 docker run --rm -it \
-  -v $(pwd):$(pwd) -w $(pwd) 
-  -p 8888:8888 -p 7473:7373 -p 7474:7474 -p 7687:7687 
-  "databaseline/zoose"
+  -v $(pwd):$(pwd) -w $(pwd) \
+  -p 8888:8888 \ 
+  "databaseline/zoose-base"
 ```
 
 Please ensure that the Docker container has sufficient resources.
@@ -67,12 +84,21 @@ Assign at least 4 GB of RAM to the container.
 Note that the Jupyter kernel may crash when loading large data sets (into memory).
 These settings apply to _all_ local containers.
 
+## BigQuery credentials
 If you use Zoose with BigQuery often, you may want to preserve credentials.
 You can do so by adding `-v $(pwd)/.config:/root/.config/pandas_gbq/` to the command above.
+
 Just make sure you ignore `.config` and do not share your personal credentials in a git repository!
 
-# Neo4j
+## IBMQ credentials
+If you use Zoose Quantum with Qiskit often, you may want to preserve IBMQ credentials.
+You can do so by adding `-v $(pwd)/.qiskit:/root/.qiskit` to the command above.
+You need to execute `IBMQ.save_account(...)` from Zoose Quantum once to save the credentials.
+Afterwards, you can execute `IBMQ.load_account()`, provided you have mounted the `.qiskit` volume prior to launching Zoose Quantum.
 
+Just make sure you ignore `.qiskit` and do not share your API token in a git repository!
+
+# Neo4j
 Zoose also kicks off a [Neo4j](https://neo4j.com) web server. 
 The UI is available at [localhost:7474](https://127.0.0.1:7474).
 Please check out [this value stream example](https://databaseline.tech/mapping-a-value-stream-in-neo4j/)
@@ -82,32 +108,14 @@ If you use Neo4j, please ensure that your Docker container has at least 6 GB of 
 This can be configured in the Docker client under 'Resources'.
 
 # What is new?
-As of 1.0.0, Zoose is based on JupyterLab instead of the classic Jupyter experience.
+## 2.0
+- With Zoose 2.0 comes a setup with `docker compose` that splits Zoose into different flavours: `base`, `neo4j`, `quantum`, and `r`. 
+  This makes it easier to manage and users who have no need of Neo4j, quantum libraries, or R, do not need these included.
+- Python has been upgraded to 3.10, and various packages have also been upgraded to the latest versions.
+- The R kernel has been dropped _temporarily_ for 2.0 due to lack of popular demand and because the kernel crashes frequently.
+  The cause of this issue is to be investigated.
+
+## 1.0
+As of 2.0.0, Zoose is based on JupyterLab instead of the classic Jupyter experience.
 This means, among others, that it offers code completion, refactoring capabilities, autoformatting, 
-an OED-recommended spelling checker with support for technical terms, and git integration (incl.
-diffs) out of the box.
-
-## Deprecations
-### Scratchpad
-If you relied on the [scratchpad extension](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scratchpad/README.html), 
-that is not available any longer because of the migration to JupyterLab.
-You can, however, have a similar experience with JupyterLab, too.
-Just open a Python console and share the notebook kernel with the console (Kernel &rarr; Change Kernel...).
-That way, you can reference objects from the notebook in the JupyterLab console.
-
-### Initialization cells
-[Initialization cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/init_cell/README.html)
-have been replaced by [Scenes](https://github.com/schmidi314/jupyterlab-scenes).
-Scenes provide an automatic translation to a 'Legacy Init' scene that corresponds to the original 
-initialization cells.
-Note that scenes are not run upon opening a (trusted) notebook.
-
-### Dynamic markdown
-[Dynamic markdown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html)
-has been deprecated.
-It did not render properly outside JupyterLab in, say, GitHub anyway.
-No replacement is available or planned.
-
-### Snippets
-[Snippets](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html) are gone.
-A [replacement](https://github.com/QuantStack/jupyterlab-snippets) is not planned for inclusion.
+an OED-recommended spelling checker with support for technical terms, and git integration (incl. diffs) out of the box.

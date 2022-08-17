@@ -4,6 +4,6 @@ for dir in *; do
     echo "${dir}"
     docker run --pull always --rm -i \
       -v $(pwd)/hadolint.yaml:/.config/hadolint.yaml \
-      hadolint/hadolint < ${dir}/Dockerfile
+      hadolint/hadolint < "${dir}/Dockerfile"
   fi
 done
