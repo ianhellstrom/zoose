@@ -1,9 +1,13 @@
+amazon-braket-sdk==1.29.0
 cirq==1.0.0
 cuquantum==22.7.1
+openfermion==1.5.1
 pennylane-cirq==0.24.0
 pennylane-qiskit==0.24.0
 pennylane-sf==0.20.1
 pennylane==0.25.0
+pytket==1.5.0
 qiskit==0.37.1
 qiskit[visualization]==0.37.1
+qutip==4.7.0
 strawberryfields==0.23.0
