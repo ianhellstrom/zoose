@@ -1,6 +1,12 @@
 #!/bin/bash
-source conf.sh
-docker push "$DOCKER_IMAGE"
+docker compose push
 
-docker tag "$DOCKER_IMAGE" "${ZOOSE_IMAGE}:latest"
-docker push "${ZOOSE_IMAGE}:latest"
+source .env
+for dir in *; do
+  if [ -d "${dir}" ]; then
+  	if [ "${dir}" != "r" ]; then
+      docker tag "${PREFIX}-${dir}" "${PREFIX}-${dir}:latest"
+      docker push "${PREFIX}-${dir}:latest"
+    fi
+  fi
+done

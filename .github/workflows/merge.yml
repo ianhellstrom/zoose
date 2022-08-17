@@ -17,3 +17,5 @@ jobs:
       run: ./build_docker.sh
     - name: Push the image to Docker Hub
       run: ./push_docker.sh
+    - name: Clean up
+      run: ./clean_docker.sh
