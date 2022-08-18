@@ -110,9 +110,3 @@ to learn more about Neo4j and Cypher.
 
 If you use Neo4j, please ensure that your Docker container has at least 6 GB of RAM allocated.
 This can be configured in the Docker client under 'Resources'.
-
-# What is new?
-## 2.0
-- With Zoose 2.0 comes a setup with `docker compose` that splits Zoose into different flavours: `base`, `neo4j`, `quantum`, and `r`. This makes it easier to manage and users who have no need of Neo4j, quantum libraries, or R, do not need these included.
-- Python has been upgraded to 3.10, and various packages have also been upgraded to the latest versions.
-- The R kernel has been dropped _temporarily_ for 2.0 due to lack of popular demand and because the kernel crashes frequently. The cause of this issue is to be investigated.
