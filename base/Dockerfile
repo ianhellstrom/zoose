@@ -1,4 +1,7 @@
-FROM ubuntu:22.04
+ARG SOURCE
+
+FROM ${SOURCE}
+
 LABEL org.opencontainers.image.authors="Ian Hellström" \
       org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
       org.opencontainers.image.vendor="Databaseline"
