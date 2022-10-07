@@ -12,6 +12,8 @@ ARG TZ="Europe/Berlin"
 
 SHELL ["/bin/bash", "-cu"]
 
+USER root
+
 RUN apt-get update && apt-get -y upgrade && \
       apt-get install -y --no-install-recommends \
         apt-transport-https \
