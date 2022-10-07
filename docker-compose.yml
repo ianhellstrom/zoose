@@ -10,7 +10,7 @@ services:
     ports:
       - "8888:8888"
   gitpod:
-    image: "${BASE}:${TAG}"
+    image: "${PREFIX}-gitpod:${TAG}"
     build:
       context: base
       dockerfile: Dockerfile
