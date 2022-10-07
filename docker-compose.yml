@@ -5,8 +5,17 @@ services:
     build:
       context: base
       dockerfile: Dockerfile
+    args:
+      SOURCE: "ubuntu:22.04"
     ports:
       - "8888:8888"
+  gitpod:
+    image: "${BASE}:${TAG}"
+    build:
+      context: base
+      dockerfile: Dockerfile
+    args:
+      SOURCE: "gitpod/workspace-full"
   neo4j:
     image: "${PREFIX}-neo4j:${TAG}"
     build:
