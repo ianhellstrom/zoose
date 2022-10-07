@@ -15,7 +15,7 @@ services:
       context: base
       dockerfile: Dockerfile
       args:
-        SOURCE: "gitpod/workspace-full"
+        SOURCE: "gitpod/workspace-base"
   neo4j:
     image: "${PREFIX}-neo4j:${TAG}"
     build:
