@@ -1,7 +1,6 @@
 ARG SOURCE
 
 FROM ${SOURCE}
-
 LABEL org.opencontainers.image.authors="Ian Hellström" \
       org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
       org.opencontainers.image.vendor="Databaseline"
@@ -11,8 +10,6 @@ ARG DEBIAN_FRONTEND="noninteractive"
 ARG TZ="Europe/Berlin"
 
 SHELL ["/bin/bash", "-cu"]
-
-USER root
 
 RUN apt-get update && apt-get -y upgrade && \
       apt-get install -y --no-install-recommends \
