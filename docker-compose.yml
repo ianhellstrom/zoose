@@ -34,4 +34,11 @@ services:
       dockerfile: Dockerfile
       args:
         BASE: "${BASE}:${TAG}"
+  quantum-gitpod:
+    image: "${PREFIX}-quantum-gitpod:${TAG}"
+    build:
+      context: gitpod
+      dockerfile: Dockerfile
+      args:
+        BASE: "${PREFIX}-quantum:${TAG}"
   
