@@ -20,7 +20,7 @@ There are also two special flavours suitable for use with [Gitpod](https://gitpo
 - `base-gitpod`
 - `quantum-gitpod`
 
-The Gitpod Quantum image offers roughly the same all-inclusive, hosted experience as [qBraid](https://qbraid.com).
+The Gitpod Quantum image offers a similar but entirely free and open-source experience as [qBraid](https://qbraid.com).
 
 ### Zoose Base
 - Python 3.10
