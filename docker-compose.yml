@@ -9,13 +9,13 @@ services:
         SOURCE: "ubuntu:22.04"
     ports:
       - "8888:8888"
-  gitpod:
-    image: "${PREFIX}-gitpod:${TAG}"
+  base-gitpod:
+    image: "${PREFIX}-base-gitpod:${TAG}"
     build:
-      context: base
+      context: gitpod
       dockerfile: Dockerfile
       args:
-        SOURCE: "gitpod/workspace-base"
+        BASE: "${BASE}:${TAG}"
   neo4j:
     image: "${PREFIX}-neo4j:${TAG}"
     build:
@@ -34,4 +34,4 @@ services:
       dockerfile: Dockerfile
       args:
         BASE: "${BASE}:${TAG}"
- 
+  
