@@ -53,18 +53,6 @@ Zoose Quantum includes everything from Zoose Base as well as:
 - QuTiP 4.7
 - Strawberry Fields 0.23
 
-### Zoose R (temporarily disabled)
-Zoose R includes everything from Zoose Base as well as:
-- R 4.1.2
-- arrow
-- bigrquery
-- caret
-  lubridate
-- randomForest
-- reshape
-- tidymodels 
-- tidyverse 
-
 # How to use?
 Execute `./zoose.sh`, which launches a Jupyter notebooks session.
 By default it launches Zoose Base.
