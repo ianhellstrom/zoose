@@ -15,6 +15,13 @@ easier: no need for virtual environments and brittle configurations that break o
 Zoose comes in a few flavours: `base`, `neo4j`, and `quantum`.
 What is included in `base` is always included in the rest, too.
 
+### Special flavours
+There are also two special flavours suitable for use with [Gitpod](https://gitpod.io), an IDE as a Service:
+- `base-gitpod`
+- `quantum-gitpod`
+
+The Gitpod Quantum image offers roughly the same all-inclusive, hosted experience as [qBraid](https://qbraid.com).
+
 ### Zoose Base
 - Python 3.10
 - JupyterLab 3.4.5 with extensions
