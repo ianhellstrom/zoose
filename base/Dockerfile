@@ -33,7 +33,8 @@ RUN apt-get update && apt-get -y upgrade && \
         libopenblas0-pthread \
         jupyter-core \
         jupyter-client \
-        git
+        git \
+        sudo
 RUN add-apt-repository -y universe && apt-get update && \
       apt-get install -y --no-install-recommends python3-pip && \
       ln -s /usr/bin/python${PYTHON_VERSION} /usr/bin/python && \
