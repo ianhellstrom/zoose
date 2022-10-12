@@ -15,3 +15,7 @@ jobs:
       run: ./check_docker.sh
     - name: Build the Docker image
       run: ./build_docker.sh
+    - name: Push dev images
+      run: ./push_docker_dev.sh
+    - name: Clean up
+      run: ./clean_docker.sh
