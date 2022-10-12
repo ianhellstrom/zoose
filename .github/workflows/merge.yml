@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Log in to Docker Hub
       run: docker login -u ${{secrets.DOCKERHUB_USER}} -p ${{secrets.DOCKERHUB_PASSWORD}}
     - name: Check the Dockerfiles
