@@ -20,7 +20,13 @@ There are also two special flavours suitable for use with [Gitpod](https://gitpo
 - `base-gitpod`
 - `quantum-gitpod`
 
-The Gitpod Quantum image offers a similar but entirely free and open-source experience as [qBraid](https://qbraid.com).
+To get started with these special flavours for Gitpod, please use the [template](https://github.com/ianhellstrom/zoose-gitpod) to create a repository that you use to spin up a [workspace](https://www.gitpod.io/docs/introduction/getting-started) from that repo.
+
+The Zoose Quantum for Gitpod image offers a similar but entirely free and open-source experience as [qBraid](https://qbraid.com).
+
+In Gitpod, you have two options for Zoose notebooks:
+1. A VSCode experience
+2. JupyterLab, which you can start from the Gitpod workspace terminal with `/jupyter.sh`.
 
 ### Zoose Base
 - Python 3.10
