@@ -5,8 +5,17 @@ services:
     build:
       context: base
       dockerfile: Dockerfile
+      args:
+        SOURCE: "ubuntu:22.04"
     ports:
       - "8888:8888"
+  base-gitpod:
+    image: "${PREFIX}-base-gitpod:${TAG}"
+    build:
+      context: gitpod
+      dockerfile: Dockerfile
+      args:
+        BASE: "${BASE}:${TAG}"
   neo4j:
     image: "${PREFIX}-neo4j:${TAG}"
     build:
@@ -25,10 +34,11 @@ services:
       dockerfile: Dockerfile
       args:
         BASE: "${BASE}:${TAG}"
-#  r:
-#    image: "${PREFIX}-r:${TAG}"
-#    build:
-#      context: r
-#      dockerfile: Dockerfile
-#      args:
-#        BASE: "${BASE}:${TAG}"
+  quantum-gitpod:
+    image: "${PREFIX}-quantum-gitpod:${TAG}"
+    build:
+      context: gitpod
+      dockerfile: Dockerfile
+      args:
+        BASE: "${PREFIX}-quantum:${TAG}"
+  
