@@ -1,0 +1,17 @@
+# Dependencies constraint to be resolved with generate_requirements.sh
+-c requirements.txt
+amazon-braket-sdk
+amazon-braket-pennylane-plugin
+amazon-braket-strawberryfields-plugin
+cirq
+cuquantum
+openfermion
+pennylane-cirq
+pennylane-qiskit
+pennylane-sf
+pennylane
+pytket
+qiskit
+qiskit[visualization]
+qutip
+strawberryfields
