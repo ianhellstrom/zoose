@@ -265,7 +265,7 @@ jupyterlab-pygments==0.2.2
     # via nbconvert
 jupyterlab-scenes==1.4.0
     # via -r /app/reqs/requirements.in
-jupyterlab-server==2.15.2
+jupyterlab-server==2.16.0
     # via jupyterlab
 jupyterlab-skip-traceback==4.0.4
     # via -r /app/reqs/requirements.in
@@ -435,7 +435,7 @@ preshed==3.0.7
     #   thinc
 prince==0.7.1
     # via -r /app/reqs/requirements.in
-prometheus-client==0.14.1
+prometheus-client==0.15.0
     # via
     #   jupyter-server
     #   nbclassic

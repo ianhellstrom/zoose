@@ -1,5 +1,6 @@
 # Dependencies constraint to be resolved with generate_requirements.sh
 -c requirements.txt
+amazon-braket-default-simulator==1.8.0
 amazon-braket-sdk
 amazon-braket-pennylane-plugin
 amazon-braket-strawberryfields-plugin
