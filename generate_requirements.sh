@@ -2,21 +2,30 @@
 mkdir reqs
 
 cp base/requirements.in reqs/requirements.in
+cp pytorch/requirements.in reqs/pytorch.in
 cp quantum/requirements.in reqs/quantum.in
+cp base/constraints.txt reqs/constraints.txt
 
-docker run --pull always --rm -it \
+docker run --rm -it \
   -v $(pwd):/app -w /app \
   databaseline/pip-compile /app/reqs/requirements.in \
     --upgrade --no-allow-unsafe \
     --strip-extras --no-header
+
+docker run --rm -it \
+  -v $(pwd):/app -w /app \
+  databaseline/pip-compile /app/reqs/pytorch.in \
+    --upgrade --no-allow-unsafe \
+    --strip-extras --no-header
     
-docker run --pull always --rm -it \
+docker run --rm -it \
   -v $(pwd):/app -w /app \
   databaseline/pip-compile /app/reqs/quantum.in \
     --upgrade --no-allow-unsafe \
     --strip-extras --no-header
 
 mv reqs/requirements.txt base/requirements.txt
-mv  reqs/quantum.txt quantum/requirements.txt
+mv reqs/pytorch.txt pytorch/requirements.txt
+mv reqs/quantum.txt quantum/requirements.txt
 
 rm -rf reqs

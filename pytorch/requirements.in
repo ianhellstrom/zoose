@@ -1,0 +1,8 @@
+# See: base/requirements.txt (generated from base/requirements.in)
+-c requirements.txt
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchaudio
+torchtext
+torchvision

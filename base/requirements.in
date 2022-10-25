@@ -1,7 +1,9 @@
+# See: base/constraints.txt
+-c constraints.txt
+
 beautifulsoup4
 black
 colorama
-google.auth
 gower
 isort
 jupyterlab-code-formatter
@@ -15,10 +17,9 @@ keras
 kneed
 matplotlib
 nltk
-numpy
+numpy==1.21.6
 openpyxl
 pandas
-pandas_gbq
 prince
 python-lsp-server[all]
 requests

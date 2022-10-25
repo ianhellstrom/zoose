@@ -1,12 +1,12 @@
-# Dependencies constraint to be resolved with generate_requirements.sh
+# See: base/requirements.txt (generated from base/requirements.in)
 -c requirements.txt
-amazon-braket-default-simulator==1.8.0
+
 amazon-braket-sdk
 amazon-braket-pennylane-plugin
 amazon-braket-strawberryfields-plugin
-cirq
 cuquantum
-openfermion
+# cirq 
+# openfermion
 pennylane-cirq
 pennylane-qiskit
 pennylane-sf

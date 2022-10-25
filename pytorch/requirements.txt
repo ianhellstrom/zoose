@@ -1,0 +1,53 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+certifi==2022.9.24
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   requests
+charset-normalizer==2.1.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   requests
+idna==3.4
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   requests
+numpy==1.21.6
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   torchtext
+    #   torchvision
+pillow==9.2.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   torchvision
+requests==2.28.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   torchtext
+    #   torchvision
+torch==1.12.1
+    # via
+    #   -r /app/reqs/pytorch.in
+    #   torchaudio
+    #   torchtext
+    #   torchvision
+torchaudio==0.12.1+cpu
+    # via -r /app/reqs/pytorch.in
+torchtext==0.13.1
+    # via -r /app/reqs/pytorch.in
+torchvision==0.13.1+cpu
+    # via -r /app/reqs/pytorch.in
+tqdm==4.64.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   torchtext
+typing-extensions==4.4.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   torch
+    #   torchvision
+urllib3==1.26.12
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   requests
