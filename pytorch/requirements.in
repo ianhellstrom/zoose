@@ -6,3 +6,6 @@ torch
 torchaudio
 torchtext
 torchvision
+tensorboard
+graphviz
+torchviz

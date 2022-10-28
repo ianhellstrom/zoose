@@ -1,5 +1,9 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 
+absl-py==1.3.0
+    # via tensorboard
+cachetools==5.2.0
+    # via google-auth
 certifi==2022.9.24
     # via
     #   -c /app/reqs/requirements.txt
@@ -8,35 +12,87 @@ charset-normalizer==2.1.1
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
+google-auth==2.13.0
+    # via
+    #   google-auth-oauthlib
+    #   tensorboard
+google-auth-oauthlib==0.4.6
+    # via tensorboard
+graphviz==0.20.1
+    # via
+    #   -r /app/reqs/pytorch.in
+    #   torchviz
+grpcio==1.50.0
+    # via tensorboard
 idna==3.4
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
+markdown==3.4.1
+    # via tensorboard
+markupsafe==2.1.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   werkzeug
 numpy==1.21.6
     # via
     #   -c /app/reqs/requirements.txt
+    #   tensorboard
     #   torchtext
     #   torchvision
+oauthlib==3.2.2
+    # via requests-oauthlib
 pillow==9.2.0
     # via
     #   -c /app/reqs/requirements.txt
     #   torchvision
+protobuf==3.19.6
+    # via tensorboard
+pyasn1==0.4.8
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   pyasn1-modules
+    #   rsa
+pyasn1-modules==0.2.8
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   google-auth
 requests==2.28.1
     # via
     #   -c /app/reqs/requirements.txt
+    #   requests-oauthlib
+    #   tensorboard
     #   torchtext
     #   torchvision
-torch==1.12.1
+requests-oauthlib==1.3.1
+    # via google-auth-oauthlib
+rsa==4.9
+    # via google-auth
+six==1.16.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   google-auth
+    #   grpcio
+tensorboard==2.10.1
+    # via -r /app/reqs/pytorch.in
+tensorboard-data-server==0.6.1
+    # via tensorboard
+tensorboard-plugin-wit==1.8.1
+    # via tensorboard
+torch==1.13.0
     # via
     #   -r /app/reqs/pytorch.in
     #   torchaudio
     #   torchtext
     #   torchvision
-torchaudio==0.12.1+cpu
+    #   torchviz
+torchaudio==0.13.0+cpu
     # via -r /app/reqs/pytorch.in
-torchtext==0.13.1
+torchtext==0.14.0
     # via -r /app/reqs/pytorch.in
-torchvision==0.13.1+cpu
+torchvision==0.14.0+cpu
+    # via -r /app/reqs/pytorch.in
+torchviz==0.0.2
     # via -r /app/reqs/pytorch.in
 tqdm==4.64.1
     # via
@@ -51,3 +107,12 @@ urllib3==1.26.12
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
+werkzeug==2.2.2
+    # via tensorboard
+wheel==0.37.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   tensorboard
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
