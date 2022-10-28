@@ -21,7 +21,7 @@ docker run --rm -it \
   -v $(pwd):/app -w /app \
   databaseline/pip-compile /app/reqs/quantum.in \
     --upgrade --no-allow-unsafe \
-    --strip-extras --no-header ]
+    --strip-extras --no-header \
     --unsafe-package cirq openfermion
 
 mv reqs/requirements.txt base/requirements.txt
