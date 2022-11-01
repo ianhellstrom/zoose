@@ -1,12 +1,12 @@
-amazon-braket-default-simulator==1.9.1
+amazon-braket-default-simulator==1.10.0
     # via amazon-braket-sdk
 amazon-braket-pennylane-plugin==1.9.0
     # via -r /app/reqs/quantum.in
-amazon-braket-schemas==1.11.0
+amazon-braket-schemas==1.12.0
     # via
     #   amazon-braket-default-simulator
     #   amazon-braket-sdk
-amazon-braket-sdk==1.32.1.post0
+amazon-braket-sdk==1.33.0
     # via
     #   -r /app/reqs/quantum.in
     #   amazon-braket-pennylane-plugin
@@ -23,7 +23,7 @@ appdirs==1.4.4
     # via
     #   pennylane
     #   xanadu-cloud-client
-asttokens==2.0.8
+asttokens==2.1.0
     # via
     #   -c /app/reqs/requirements.txt
     #   stack-data
@@ -39,9 +39,9 @@ backoff==2.2.1
     # via amazon-braket-sdk
 boltons==21.0.0
     # via amazon-braket-sdk
-boto3==1.25.3
+boto3==1.25.5
     # via amazon-braket-sdk
-botocore==1.28.3
+botocore==1.28.5
     # via
     #   boto3
     #   s3transfer
@@ -65,9 +65,13 @@ cirq-core==1.0.0
     #   pennylane-cirq
 cirq-pasqal==1.0.0
     # via pennylane-cirq
+click==8.1.3
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   dask
 cloudpickle==2.2.0
     # via dask
-contourpy==1.0.5
+contourpy==1.0.6
     # via
     #   -c /app/reqs/requirements.txt
     #   matplotlib
@@ -85,7 +89,7 @@ cycler==0.11.0
     #   matplotlib
 cython==0.29.32
     # via mthree
-dask==2022.10.0
+dask==2022.10.2
     # via thewalrus
 debugpy==1.6.3
     # via
@@ -105,7 +109,7 @@ entrypoints==0.4
     # via
     #   -c /app/reqs/requirements.txt
     #   jupyter-client
-executing==1.1.1
+executing==1.2.0
     # via
     #   -c /app/reqs/requirements.txt
     #   stack-data
@@ -125,11 +129,11 @@ idna==3.4
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
-ipykernel==6.16.2
+ipykernel==6.17.0
     # via
     #   -c /app/reqs/requirements.txt
     #   ipywidgets
-ipython==8.5.0
+ipython==8.6.0
     # via
     #   -c /app/reqs/requirements.txt
     #   ipykernel
@@ -306,7 +310,7 @@ pickleshare==0.7.5
     # via
     #   -c /app/reqs/requirements.txt
     #   ipython
-pillow==9.2.0
+pillow==9.3.0
     # via
     #   -c /app/reqs/requirements.txt
     #   matplotlib
@@ -335,9 +339,10 @@ pycparser==2.21
     # via
     #   -c /app/reqs/requirements.txt
     #   cffi
-pydantic==1.10.2
+pydantic==1.9.0
     # via
     #   -c /app/reqs/requirements.txt
+    #   amazon-braket-default-simulator
     #   amazon-braket-schemas
     #   xanadu-cloud-client
 pydot==1.4.2
@@ -368,9 +373,9 @@ python-dateutil==2.8.2
     #   xanadu-cloud-client
 python-dotenv==0.21.0
     # via pydantic
-pytket==1.7.3
+pytket==1.8.0
     # via -r /app/reqs/quantum.in
-pytz==2022.5
+pytz==2022.6
     # via
     #   -c /app/reqs/requirements.txt
     #   pandas
@@ -450,7 +455,7 @@ six==1.16.0
     #   python-dateutil
 sortedcontainers==2.4.0
     # via cirq-core
-stack-data==0.5.1
+stack-data==0.6.0
     # via
     #   -c /app/reqs/requirements.txt
     #   ipython
@@ -472,7 +477,7 @@ sympy==1.11.1
     #   quantum-blackbird
     #   strawberryfields
     #   thewalrus
-termcolor==2.0.1
+termcolor==2.1.0
     # via fire
 thewalrus==0.19.0
     # via strawberryfields
@@ -536,4 +541,7 @@ xanadu-cloud-client==0.2.1
     # via strawberryfields
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools
+setuptools==65.5.0
+    # via
+    #   numba
+    #   qwasm

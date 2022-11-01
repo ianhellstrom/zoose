@@ -55,20 +55,20 @@ Zoose Neo4j includes everything from Zoose Base as well as:
 
 ### Zoose PyTorch
 Zoose PyTorch includes everything from Zoose Base as well as:
-- PyTorch 1.12
-- PyTorch Audio 0.12 (CPU)
+- PyTorch 1.13
+- PyTorch Audio 0.13 (CPU)
 - PyTorch Text 0.13 (CPU)
 - PyTorch Vision 0.13 (CPU)
 
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:
-- Amazon Braket SDK 1.29
+- Amazon Braket SDK 1.33
 - Cirq 1.0
 - cuQuantum 22.7
 - OpenFermion 1.5
 - PennyLane 0.25 with plugins for Cirq, Stawberry Fields, Qiskit
-- pytket 1.5
-- Qiskit 0.37
+- pytket 1.8
+- Qiskit 0.39
 - QuTiP 4.7
 - Strawberry Fields 0.23
 

@@ -12,7 +12,7 @@ charset-normalizer==2.1.1
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
-google-auth==2.13.0
+google-auth==2.14.0
     # via
     #   google-auth-oauthlib
     #   tensorboard
@@ -42,7 +42,7 @@ numpy==1.21.6
     #   torchvision
 oauthlib==3.2.2
     # via requests-oauthlib
-pillow==9.2.0
+pillow==9.3.0
     # via
     #   -c /app/reqs/requirements.txt
     #   torchvision

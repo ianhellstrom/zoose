@@ -1,3 +1,6 @@
+# Generated from base/constraints.txt
+-c constraints.txt
+
 beautifulsoup4
 black
 colorama
@@ -14,7 +17,7 @@ keras
 kneed
 matplotlib
 nltk
-numpy
+numpy==1.21.6
 openpyxl
 pandas
 prince

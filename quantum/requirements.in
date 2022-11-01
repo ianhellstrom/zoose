@@ -1,4 +1,4 @@
-# See: base/requirements.txt (generated from base/requirements.in)
+# See: base/requirements.txt
 -c requirements.txt
 
 amazon-braket-sdk
