@@ -12,17 +12,16 @@ Containerized notebooks with a standard set of packages make sharing and reprodu
 easier: no need for virtual environments and brittle configurations that break on Python upgrades.
 
 ## Flavours
-Zoose comes in a few flavours: `base`, `neo4j`, and `quantum`.
+Zoose comes in a few flavours: `base`, `neo4j`, `pytorch`, and `quantum`.
 What is included in `base` is always included in the rest, too.
 
 ### Special flavours
 There are also two special flavours suitable for use with [Gitpod](https://gitpod.io), an IDE as a Service:
 - `base-gitpod`
+- `pytorch-gitpod`
 - `quantum-gitpod`
 
 To get started with these special flavours for Gitpod, please use the [template](https://github.com/ianhellstrom/zoose-gitpod) to create a repository that you use to spin up a [workspace](https://www.gitpod.io/docs/introduction/getting-started) from that repo.
-
-The Zoose Quantum for Gitpod image offers a similar but entirely free and open-source experience as [qBraid](https://qbraid.com).
 
 In Gitpod, you have two options for Zoose notebooks:
 1. A VSCode experience
@@ -30,22 +29,22 @@ In Gitpod, you have two options for Zoose notebooks:
 
 ### Zoose Base
 - Python 3.10
-- JupyterLab 3.4.5 with extensions
+- JupyterLab 3.5.0 with extensions
 
 Python packages:
 - Beautiful Soup 4.11
 - Gower 0.0.5
-- Keras 2.9
-- Matplotlib 3.5
+- Keras 2.10
+- Matplotlib 3.6
 - NLTK 3.7
-- Numpy 1.23
-- Pandas 1.4 with Google BigQuery 0.17
+- Numpy 1.21
+- Pandas 1.5
 - Prince 0.7  
 - Requests 2.28
 - SciPy 1.9
 - Scikit-learn 1.1
-- Scrapy 1.0
-- Seaborn 0.11
+- Scrapy 2.7
+- Seaborn 0.21
 - StatsModels 0.13
 - spaCy 3.4
 
@@ -54,15 +53,22 @@ Zoose Neo4j includes everything from Zoose Base as well as:
 - Neo4j Community Edition 4.4
 - py2neo 2021.2.3
 
+### Zoose PyTorch
+Zoose PyTorch includes everything from Zoose Base as well as:
+- PyTorch 1.13
+- PyTorch Audio 0.13 (CPU)
+- PyTorch Text 0.13 (CPU)
+- PyTorch Vision 0.13 (CPU)
+
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:
-- Amazon Braket SDK 1.29
+- Amazon Braket SDK 1.33
 - Cirq 1.0
 - cuQuantum 22.7
 - OpenFermion 1.5
 - PennyLane 0.25 with plugins for Cirq, Stawberry Fields, Qiskit
-- pytket 1.5
-- Qiskit 0.37
+- pytket 1.8
+- Qiskit 0.39
 - QuTiP 4.7
 - Strawberry Fields 0.23
 
@@ -90,6 +96,9 @@ Note that the Jupyter kernel may crash when loading large data sets (into memory
 These settings apply to _all_ local containers.
 
 ## BigQuery credentials
+BigQuery support has been dropped from the base image in 3.1.
+You can install `pandas_gbq` and `google.auth` easily from within a notebook with `pip`: `! pip install pandas_gbq`.
+
 If you use Zoose with BigQuery often, you may want to preserve credentials.
 You can do so by adding `-v $(pwd)/.config:/root/.config/pandas_gbq/` to the command above.
 

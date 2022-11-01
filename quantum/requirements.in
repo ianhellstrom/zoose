@@ -1,0 +1,16 @@
+# See: base/requirements.txt
+-c requirements.txt
+
+amazon-braket-sdk
+amazon-braket-pennylane-plugin
+amazon-braket-strawberryfields-plugin
+cuquantum
+pennylane-cirq
+pennylane-qiskit
+pennylane-sf
+pennylane
+pytket
+qiskit
+qiskit[visualization]
+qutip
+strawberryfields

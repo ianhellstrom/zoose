@@ -27,6 +27,20 @@ services:
       - "7473:7373"
       - "7474:7474"
       - "7687:7686"
+  pytorch:
+    image: "${PREFIX}-pytorch:${TAG}"
+    build:
+      context: pytorch
+      dockerfile: Dockerfile
+      args:
+        BASE: "${BASE}:${TAG}"
+  pytorch-gitpod:
+    image: "${PREFIX}-pytorch-gitpod:${TAG}"
+    build:
+      context: gitpod
+      dockerfile: Dockerfile
+      args:
+        BASE: "${PREFIX}-pytorch:${TAG}"
   quantum:
     image: "${PREFIX}-quantum:${TAG}"
     build:
