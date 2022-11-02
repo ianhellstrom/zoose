@@ -5,6 +5,7 @@ beautifulsoup4
 black
 colorama
 gower
+ipywidgets
 isort
 jupyterlab-code-formatter
 jupyterlab-git
