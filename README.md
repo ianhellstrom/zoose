@@ -15,7 +15,7 @@ easier: no need for virtual environments and brittle configurations that break o
 Zoose comes in a few flavours: `base`, `neo4j`, `pytorch`, and `quantum`.
 What is included in `base` is always included in the rest, too.
 
-You can run these flavours directly in VSCode from your browser with [GitHub Codespaces](https://github.com/ianhellstrom/zoose-codespace/blob/master/README.md).
+You can run these flavours directly in VSCode from your browser with [GitHub Codespaces](https://github.com/ianhellstrom/zoose-codespace/).
 Only two clicks to spin up an IDE or notebook with all packages installed and ready!
 
 ### Special flavours
