@@ -4,7 +4,7 @@ absl-py==1.3.0
     # via tensorboard
 cachetools==5.2.0
     # via google-auth
-certifi==2022.9.24
+certifi==2022.12.7
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
@@ -12,7 +12,7 @@ charset-normalizer==2.1.1
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
-google-auth==2.14.0
+google-auth==2.15.0
     # via
     #   google-auth-oauthlib
     #   tensorboard
@@ -22,7 +22,7 @@ graphviz==0.20.1
     # via
     #   -r /app/reqs/pytorch.in
     #   torchviz
-grpcio==1.50.0
+grpcio==1.51.1
     # via tensorboard
 idna==3.4
     # via
@@ -46,7 +46,7 @@ pillow==9.3.0
     # via
     #   -c /app/reqs/requirements.txt
     #   torchvision
-protobuf==3.19.6
+protobuf==3.20.3
     # via tensorboard
 pyasn1==0.4.8
     # via
@@ -72,25 +72,24 @@ six==1.16.0
     # via
     #   -c /app/reqs/requirements.txt
     #   google-auth
-    #   grpcio
-tensorboard==2.10.1
+tensorboard==2.11.0
     # via -r /app/reqs/pytorch.in
 tensorboard-data-server==0.6.1
     # via tensorboard
 tensorboard-plugin-wit==1.8.1
     # via tensorboard
-torch==1.13.0
+torch==1.13.1
     # via
     #   -r /app/reqs/pytorch.in
     #   torchaudio
     #   torchtext
     #   torchvision
     #   torchviz
-torchaudio==0.13.0+cpu
+torchaudio==0.13.1+cpu
     # via -r /app/reqs/pytorch.in
-torchtext==0.14.0
+torchtext==0.14.1
     # via -r /app/reqs/pytorch.in
-torchvision==0.14.0+cpu
+torchvision==0.14.1+cpu
     # via -r /app/reqs/pytorch.in
 torchviz==0.0.2
     # via -r /app/reqs/pytorch.in
@@ -103,13 +102,13 @@ typing-extensions==4.4.0
     #   -c /app/reqs/requirements.txt
     #   torch
     #   torchvision
-urllib3==1.26.12
+urllib3==1.26.13
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
 werkzeug==2.2.2
     # via tensorboard
-wheel==0.37.1
+wheel==0.38.4
     # via
     #   -c /app/reqs/requirements.txt
     #   tensorboard
