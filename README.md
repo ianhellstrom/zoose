@@ -29,24 +29,24 @@ In Gitpod, you have two options for Zoose notebooks:
 
 ### Zoose Base
 - Python 3.10
-- JupyterLab 3.5.0 with extensions
+- JupyterLab 3.5 with extensions
 
 Python packages:
 - Beautiful Soup 4.11
-- Gower 0.0.5
-- Keras 2.10
+- Gower 0.1.2
+- Keras 2.11
 - Matplotlib 3.6
-- NLTK 3.7
+- NLTK 3.8
 - Numpy 1.21
 - Pandas 1.5
 - Prince 0.7  
 - Requests 2.28
-- SciPy 1.9
-- Scikit-learn 1.1
+- SciPy 1.10
+- Scikit-learn 1.2
 - Scrapy 2.7
-- Seaborn 0.21
-- StatsModels 0.13
+- Seaborn 0.12
 - spaCy 3.4
+- StatsModels 0.13
 
 ### Zoose Neo4j
 Zoose Neo4j includes everything from Zoose Base as well as:
@@ -57,17 +57,17 @@ Zoose Neo4j includes everything from Zoose Base as well as:
 Zoose PyTorch includes everything from Zoose Base as well as:
 - PyTorch 1.13
 - PyTorch Audio 0.13 (CPU)
-- PyTorch Text 0.13 (CPU)
-- PyTorch Vision 0.13 (CPU)
+- PyTorch Text 0.14 (CPU)
+- PyTorch Vision 0.14 (CPU)
 
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:
-- Amazon Braket SDK 1.33
-- Cirq 1.0
-- cuQuantum 22.7
+- Amazon Braket SDK 1.35
+- Cirq 1.1
+- cuQuantum 22.11
 - OpenFermion 1.5
-- PennyLane 0.25 with plugins for Cirq, Stawberry Fields, Qiskit
-- pytket 1.8
+- PennyLane 0.27 with plugins for Cirq, Stawberry Fields, Qiskit
+- pytket 1.10
 - Qiskit 0.39
 - QuTiP 4.7
 - Strawberry Fields 0.23
