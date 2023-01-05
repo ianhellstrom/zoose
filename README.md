@@ -28,7 +28,7 @@ In Gitpod, you have two options for Zoose notebooks:
 2. JupyterLab, which you can start from the Gitpod workspace terminal with `/jupyter.sh`.
 
 ### Zoose Base
-- Python 3.11
+- Python 3.10
 - JupyterLab 3.5 with extensions
 
 Python packages:

@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.authors="Ian Hellström" \
       org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
       org.opencontainers.image.vendor="Databaseline"
 
-ENV PYTHON_VERSION="3.11"
+ENV PYTHON_VERSION="3.10"
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG TZ="Europe/Berlin"
 
