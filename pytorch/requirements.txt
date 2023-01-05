@@ -42,7 +42,7 @@ numpy==1.21.6
     #   torchvision
 oauthlib==3.2.2
     # via requests-oauthlib
-pillow==9.3.0
+pillow==9.4.0
     # via
     #   -c /app/reqs/requirements.txt
     #   torchvision
@@ -78,7 +78,7 @@ tensorboard-data-server==0.6.1
     # via tensorboard
 tensorboard-plugin-wit==1.8.1
     # via tensorboard
-torch==1.13.1
+torch==1.13.1+cpu
     # via
     #   -r /app/reqs/pytorch.in
     #   torchaudio

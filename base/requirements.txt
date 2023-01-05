@@ -70,7 +70,7 @@ constantly==15.1.0
     # via twisted
 contourpy==1.0.6
     # via matplotlib
-cryptography==38.0.4
+cryptography==39.0.0
     # via
     #   pyopenssl
     #   scrapy
@@ -108,9 +108,9 @@ executing==1.2.0
     # via stack-data
 fastjsonschema==2.16.2
     # via nbformat
-filelock==3.8.2
+filelock==3.9.0
     # via tldextract
-flake8==5.0.4
+flake8==6.0.0
     # via python-lsp-server
 fonttools==4.38.0
     # via matplotlib
@@ -118,7 +118,7 @@ fqdn==1.5.1
     # via jsonschema
 gitdb==4.0.10
     # via gitpython
-gitpython==3.1.29
+gitpython==3.1.30
     # via nbdime
 gower==0.1.2
     # via -r /app/reqs/requirements.in
@@ -133,12 +133,12 @@ idna==3.4
     #   tldextract
 incremental==22.10.0
     # via twisted
-ipykernel==6.19.2
+ipykernel==6.19.4
     # via
     #   ipywidgets
     #   nbclassic
     #   notebook
-ipython==8.7.0
+ipython==8.8.0
     # via
     #   ipykernel
     #   ipywidgets
@@ -147,11 +147,11 @@ ipython-genutils==0.2.0
     # via
     #   nbclassic
     #   notebook
-ipywidgets==8.0.3
+ipywidgets==8.0.4
     # via -r /app/reqs/requirements.in
 isoduration==20.11.0
     # via jsonschema
-isort==5.11.2
+isort==5.11.4
     # via
     #   -r /app/reqs/requirements.in
     #   pylint
@@ -181,7 +181,7 @@ joblib==1.2.0
     # via
     #   nltk
     #   scikit-learn
-json5==0.9.10
+json5==0.9.11
     # via jupyterlab-server
 jsonpointer==2.3
     # via jsonschema
@@ -197,7 +197,7 @@ jupyter-client==7.4.8
     #   nbclassic
     #   nbclient
     #   notebook
-jupyter-core==5.1.0
+jupyter-core==5.1.2
     # via
     #   jupyter-client
     #   jupyter-server
@@ -213,7 +213,7 @@ jupyter-lsp==1.5.1
     # via jupyterlab-lsp
 jupyter-packaging==0.12.3
     # via jupyterlab-skip-traceback
-jupyter-server==2.0.1
+jupyter-server==2.0.6
     # via
     #   jupyter-lsp
     #   jupyter-server-mathjax
@@ -225,9 +225,9 @@ jupyter-server==2.0.1
     #   notebook-shim
 jupyter-server-mathjax==0.2.6
     # via nbdime
-jupyter-server-terminals==0.4.2
+jupyter-server-terminals==0.4.3
     # via jupyter-server
-jupyterlab==3.5.1
+jupyterlab==3.5.2
     # via
     #   -r /app/reqs/requirements.in
     #   jupyterlab-code-formatter
@@ -236,7 +236,7 @@ jupyterlab==3.5.1
     #   jupyterlab-spellchecker
 jupyterlab-code-formatter==1.5.3
     # via -r /app/reqs/requirements.in
-jupyterlab-git==0.40.1
+jupyterlab-git==0.41.0
     # via -r /app/reqs/requirements.in
 jupyterlab-lsp==3.10.2
     # via -r /app/reqs/requirements.in
@@ -244,13 +244,13 @@ jupyterlab-pygments==0.2.2
     # via nbconvert
 jupyterlab-scenes==1.4.0
     # via -r /app/reqs/requirements.in
-jupyterlab-server==2.16.5
+jupyterlab-server==2.18.0
     # via jupyterlab
 jupyterlab-skip-traceback==4.0.4
     # via -r /app/reqs/requirements.in
 jupyterlab-spellchecker==0.7.2
     # via -r /app/reqs/requirements.in
-jupyterlab-widgets==3.0.4
+jupyterlab-widgets==3.0.5
     # via ipywidgets
 keras==2.11.0
     # via -r /app/reqs/requirements.in
@@ -260,7 +260,7 @@ kneed==0.8.1
     # via -r /app/reqs/requirements.in
 langcodes==3.3.0
     # via spacy
-lazy-object-proxy==1.8.0
+lazy-object-proxy==1.9.0
     # via astroid
 lxml==4.9.2
     # via
@@ -300,14 +300,14 @@ nbclassic==0.4.8
     #   notebook
 nbclient==0.7.2
     # via nbconvert
-nbconvert==7.2.6
+nbconvert==7.2.7
     # via
     #   jupyter-server
     #   nbclassic
     #   notebook
 nbdime==3.1.1
     # via jupyterlab-git
-nbformat==5.7.0
+nbformat==5.7.1
     # via
     #   jupyter-server
     #   jupyterlab-git
@@ -322,7 +322,7 @@ nest-asyncio==1.5.6
     #   jupyter-client
     #   nbclassic
     #   notebook
-nltk==3.8
+nltk==3.8.1
     # via -r /app/reqs/requirements.in
 notebook==6.5.2
     # via jupyterlab
@@ -364,6 +364,7 @@ packaging==22.0
     #   scrapy
     #   spacy
     #   statsmodels
+    #   thinc
 pandas==1.5.2
     # via
     #   -r /app/reqs/requirements.in
@@ -390,11 +391,11 @@ pexpect==4.8.0
     #   jupyterlab-git
 pickleshare==0.7.5
     # via ipython
-pillow==9.3.0
+pillow==9.4.0
     # via
     #   matplotlib
     #   tikzplotlib
-platformdirs==2.6.0
+platformdirs==2.6.2
     # via
     #   black
     #   jupyter-core
@@ -431,7 +432,7 @@ pyasn1==0.4.8
     #   service-identity
 pyasn1-modules==0.2.8
     # via service-identity
-pycodestyle==2.9.1
+pycodestyle==2.10.0
     # via
     #   autopep8
     #   flake8
@@ -446,27 +447,28 @@ pydantic==1.9.0
     #   thinc
 pydispatcher==2.0.6
     # via scrapy
-pydocstyle==6.1.1
+pydocstyle==6.2.2
     # via python-lsp-server
-pyflakes==2.5.0
+pyflakes==3.0.1
     # via
     #   flake8
     #   python-lsp-server
-pygments==2.13.0
+pygments==2.14.0
     # via
     #   ipython
     #   nbconvert
     #   nbdime
-pylint==2.15.8
+pylint==2.15.9
     # via python-lsp-server
-pyopenssl==22.1.0
+pyopenssl==23.0.0
     # via scrapy
 pyparsing==3.0.9
     # via matplotlib
-pyrsistent==0.19.2
+pyrsistent==0.19.3
     # via jsonschema
 python-dateutil==2.8.2
     # via
+    #   arrow
     #   jupyter-client
     #   matplotlib
     #   pandas
@@ -474,11 +476,11 @@ python-json-logger==2.0.4
     # via jupyter-events
 python-lsp-jsonrpc==1.0.0
     # via python-lsp-server
-python-lsp-server==1.6.0
+python-lsp-server==1.7.0
     # via -r /app/reqs/requirements.in
 pytoolconfig==1.2.4
     # via rope
-pytz==2022.6
+pytz==2022.7
     # via
     #   babel
     #   pandas
@@ -509,13 +511,13 @@ rfc3339-validator==0.1.4
     # via jsonschema
 rfc3986-validator==0.1.1
     # via jsonschema
-rope==1.5.1
+rope==1.6.0
     # via python-lsp-server
 scikit-learn==1.2.0
     # via
     #   -r /app/reqs/requirements.in
     #   prince
-scipy==1.9.3
+scipy==1.10.0
     # via
     #   -r /app/reqs/requirements.in
     #   gower
@@ -525,7 +527,7 @@ scipy==1.9.3
     #   statsmodels
 scrapy==2.7.1
     # via -r /app/reqs/requirements.in
-seaborn==0.12.1
+seaborn==0.12.2
     # via -r /app/reqs/requirements.in
 send2trash==1.8.0
     # via
@@ -559,7 +561,7 @@ soupsieve==2.3.2.post1
     # via beautifulsoup4
 spacy==3.4.4
     # via -r /app/reqs/requirements.in
-spacy-legacy==3.0.10
+spacy-legacy==3.0.11
     # via spacy
 spacy-loggers==1.0.4
     # via spacy
@@ -578,7 +580,7 @@ terminado==0.17.1
     #   jupyter-server-terminals
     #   nbclassic
     #   notebook
-thinc==8.1.5
+thinc==8.1.6
     # via spacy
 threadpoolctl==3.1.0
     # via scikit-learn
@@ -615,7 +617,7 @@ tqdm==4.64.1
     #   -r /app/reqs/requirements.in
     #   nltk
     #   spacy
-traitlets==5.7.1
+traitlets==5.8.0
     # via
     #   comm
     #   ipykernel
@@ -675,7 +677,7 @@ whatthepatch==1.0.3
     # via python-lsp-server
 wheel==0.38.4
     # via jupyter-packaging
-widgetsnbextension==4.0.4
+widgetsnbextension==4.0.5
     # via ipywidgets
 wrapt==1.14.1
     # via astroid
