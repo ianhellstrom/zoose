@@ -1,3 +1,0 @@
-# See: https://github.com/quantumlib/Cirq/issues/5929
-cirq
-openfermion

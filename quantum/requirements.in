@@ -4,7 +4,9 @@
 amazon-braket-sdk
 amazon-braket-pennylane-plugin
 amazon-braket-strawberryfields-plugin
+cirq
 cuquantum
+openfermion
 pennylane-cirq
 pennylane-qiskit
 pennylane-sf

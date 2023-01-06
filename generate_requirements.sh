@@ -10,21 +10,24 @@ docker run --rm -it \
   -v $(pwd):/app -w /app \
   databaseline/pip-compile /app/reqs/requirements.in \
     --upgrade --no-allow-unsafe \
-    --strip-extras --no-header
+    --strip-extras --no-header \
+    --resolver=backtracking
 
 docker run --rm -it \
   -v $(pwd):/app -w /app \
   databaseline/pip-compile /app/reqs/pytorch.in \
     --upgrade --no-allow-unsafe \
-    --strip-extras --no-header
+    --strip-extras --no-header \
+    --resolver=backtracking
     
 docker run --rm -it \
   -v $(pwd):/app -w /app \
   databaseline/pip-compile /app/reqs/quantum.in \
     --upgrade --allow-unsafe \
     --strip-extras --no-header \
-    --unsafe-package cirq \
-    --unsafe-package openfermion
+    --resolver=backtracking
+#    --unsafe-package cirq \
+#    --unsafe-package openfermion
 
 mv reqs/requirements.txt base/requirements.txt
 mv reqs/pytorch.txt pytorch/requirements.txt
