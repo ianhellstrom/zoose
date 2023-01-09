@@ -2,8 +2,10 @@
 
 absl-py==1.3.0
     # via tensorboard
-cachetools==5.2.0
+cachetools==5.2.1
     # via google-auth
+captum==0.6.0
+    # via -r /app/reqs/pytorch.in
 certifi==2022.12.7
     # via
     #   -c /app/reqs/requirements.txt
@@ -12,6 +14,23 @@ charset-normalizer==2.1.1
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
+contourpy==1.0.6
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+cycler==0.11.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+filelock==3.9.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   huggingface-hub
+    #   transformers
+fonttools==4.38.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
 google-auth==2.15.0
     # via
     #   google-auth-oauthlib
@@ -24,27 +43,48 @@ graphviz==0.20.1
     #   torchviz
 grpcio==1.51.1
     # via tensorboard
+huggingface-hub==0.11.1
+    # via transformers
 idna==3.4
     # via
     #   -c /app/reqs/requirements.txt
     #   requests
+kiwisolver==1.4.4
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
 markdown==3.4.1
     # via tensorboard
 markupsafe==2.1.1
     # via
     #   -c /app/reqs/requirements.txt
     #   werkzeug
+matplotlib==3.6.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   captum
 numpy==1.21.6
     # via
     #   -c /app/reqs/requirements.txt
+    #   captum
+    #   contourpy
+    #   matplotlib
     #   tensorboard
     #   torchtext
     #   torchvision
+    #   transformers
 oauthlib==3.2.2
     # via requests-oauthlib
+packaging==23.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   huggingface-hub
+    #   matplotlib
+    #   transformers
 pillow==9.4.0
     # via
     #   -c /app/reqs/requirements.txt
+    #   matplotlib
     #   torchvision
 protobuf==3.20.3
     # via tensorboard
@@ -57,13 +97,32 @@ pyasn1-modules==0.2.8
     # via
     #   -c /app/reqs/requirements.txt
     #   google-auth
+pyparsing==3.0.9
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+python-dateutil==2.8.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+pyyaml==6.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   huggingface-hub
+    #   transformers
+regex==2022.10.31
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   transformers
 requests==2.28.1
     # via
     #   -c /app/reqs/requirements.txt
+    #   huggingface-hub
     #   requests-oauthlib
     #   tensorboard
     #   torchtext
     #   torchvision
+    #   transformers
 requests-oauthlib==1.3.1
     # via google-auth-oauthlib
 rsa==4.9
@@ -72,15 +131,19 @@ six==1.16.0
     # via
     #   -c /app/reqs/requirements.txt
     #   google-auth
+    #   python-dateutil
 tensorboard==2.11.0
     # via -r /app/reqs/pytorch.in
 tensorboard-data-server==0.6.1
     # via tensorboard
 tensorboard-plugin-wit==1.8.1
     # via tensorboard
+tokenizers==0.13.2
+    # via transformers
 torch==1.13.1+cpu
     # via
     #   -r /app/reqs/pytorch.in
+    #   captum
     #   torchaudio
     #   torchtext
     #   torchvision
@@ -96,10 +159,15 @@ torchviz==0.0.2
 tqdm==4.64.1
     # via
     #   -c /app/reqs/requirements.txt
+    #   huggingface-hub
     #   torchtext
+    #   transformers
+transformers==4.25.1
+    # via -r /app/reqs/pytorch.in
 typing-extensions==4.4.0
     # via
     #   -c /app/reqs/requirements.txt
+    #   huggingface-hub
     #   torch
     #   torchvision
 urllib3==1.26.13

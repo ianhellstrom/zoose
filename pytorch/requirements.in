@@ -2,10 +2,12 @@
 -c requirements.txt
 
 --extra-index-url https://download.pytorch.org/whl/cpu
+captum
 torch
 torchaudio
 torchtext
 torchvision
 tensorboard
+transformers
 graphviz
 torchviz
