@@ -38,6 +38,7 @@ Python packages:
 - Beautiful Soup 4.11
 - Gower 0.1.2
 - Keras 2.11
+- LIME 0.2
 - Matplotlib 3.6
 - NLTK 3.8
 - Numpy 1.21
@@ -48,6 +49,7 @@ Python packages:
 - Scikit-learn 1.2
 - Scrapy 2.7
 - Seaborn 0.12
+- SHAP 0.41
 - spaCy 3.4
 - StatsModels 0.13
 
@@ -58,10 +60,12 @@ Zoose Neo4j includes everything from Zoose Base as well as:
 
 ### Zoose PyTorch
 Zoose PyTorch includes everything from Zoose Base as well as:
+- Captum 0.6
 - PyTorch 1.13
 - PyTorch Audio 0.13 (CPU)
 - PyTorch Text 0.14 (CPU)
 - PyTorch Vision 0.14 (CPU)
+- Transformers 4.25
 
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:

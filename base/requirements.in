@@ -16,6 +16,7 @@ jupyterlab-spellchecker
 jupyterlab
 keras
 kneed
+lime
 matplotlib
 nltk
 numpy==1.21.6
@@ -28,6 +29,7 @@ scikit-learn
 scipy
 scrapy
 seaborn
+shap
 spacy
 statsmodels
 tikzplotlib
