@@ -12,7 +12,7 @@ Containerized notebooks with a standard set of packages make sharing and reprodu
 easier: no need for virtual environments and brittle configurations that break on Python upgrades.
 
 ## Flavours
-Zoose comes in a few flavours: `base`, `neo4j`, `pytorch`, and `quantum`.
+Zoose comes in a few flavours: `base`, `neo4j`, `pytorch`, `quantum`, and `geo`.
 What is included in `base` is always included in the rest, too.
 
 You can run these flavours directly in VSCode from your browser with [GitHub Codespaces](https://github.com/ianhellstrom/zoose-codespace/).
@@ -23,6 +23,7 @@ There are also two special flavours suitable for use with [Gitpod](https://gitpo
 - `base-gitpod`
 - `pytorch-gitpod`
 - `quantum-gitpod`
+- `geo-gitpod`
 
 To get started with these special flavours for Gitpod, please use the [template](https://github.com/ianhellstrom/zoose-gitpod) to create a repository that you use to spin up a [workspace](https://www.gitpod.io/docs/introduction/getting-started) from that repo.
 
@@ -90,7 +91,7 @@ Zoose Geo includes everything from Zoose Base as well as:
 # How to use?
 Execute `./zoose.sh`, which launches a Jupyter notebooks session.
 By default it launches Zoose Base.
-If you want Neo4j or Quantum, just use `./zoose.sh neo4j` or `./zoose.sh quantum` instead.
+If you want Neo4j, Geo, or Quantum, just use `./zoose.sh neo4j`, `./zoose.sh geo`, or `./zoose.sh quantum` instead.
 
 Please use the link from the command line to access it, as it requires a token.
 
