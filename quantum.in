@@ -1,5 +1,3 @@
-# Generated from base/constraints.txt
--c constraints.txt
 
 beautifulsoup4
 black
@@ -34,3 +32,19 @@ spacy
 statsmodels
 tikzplotlib
 tqdm
+
+amazon-braket-sdk
+amazon-braket-pennylane-plugin
+amazon-braket-strawberryfields-plugin
+cirq
+cuquantum
+openfermion
+pennylane-cirq
+pennylane-qiskit
+pennylane-sf
+pennylane
+pytket
+qiskit
+qiskit[visualization]
+qutip
+strawberryfields

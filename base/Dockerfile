@@ -31,7 +31,8 @@ RUN apt-get update && apt-get -y upgrade && \
         jupyter-core \
         jupyter-client \
         git \
-        sudo
+        sudo \
+        libgdal-dev 
 RUN add-apt-repository -y universe && apt-get update && \
       apt-get install -y --no-install-recommends python3-pip && \
       ln -s /usr/bin/python${PYTHON_VERSION} /usr/bin/python && \
@@ -50,6 +51,9 @@ COPY config/format.json /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_
 COPY config/format.json /root/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter/settings.jupyterlab-settings
 COPY config/traceback.json /root/.jupyter/lab/user-settings/jupyterlab-skip-traceback/settings.jupyterlab-settings
 COPY config/pycodestyle /root/.config/pycodestyle
+
+RUN export CPLUS_INCLUDE_PATH=/usr/include/gdal
+RUN export C_INCLUDE_PATH=/usr/include/gdal
 
 EXPOSE 8888
 

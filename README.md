@@ -12,7 +12,7 @@ Containerized notebooks with a standard set of packages make sharing and reprodu
 easier: no need for virtual environments and brittle configurations that break on Python upgrades.
 
 ## Flavours
-Zoose comes in a few flavours: `base`, `neo4j`, `pytorch`, and `quantum`.
+Zoose comes in a few flavours: `base`, `neo4j`, `pytorch`, `quantum`, and `geo`.
 What is included in `base` is always included in the rest, too.
 
 You can run these flavours directly in VSCode from your browser with [GitHub Codespaces](https://github.com/ianhellstrom/zoose-codespace/).
@@ -23,6 +23,7 @@ There are also two special flavours suitable for use with [Gitpod](https://gitpo
 - `base-gitpod`
 - `pytorch-gitpod`
 - `quantum-gitpod`
+- `geo-gitpod`
 
 To get started with these special flavours for Gitpod, please use the [template](https://github.com/ianhellstrom/zoose-gitpod) to create a repository that you use to spin up a [workspace](https://www.gitpod.io/docs/introduction/getting-started) from that repo.
 
@@ -32,26 +33,26 @@ In Gitpod, you have two options for Zoose notebooks:
 
 ### Zoose Base
 - Python 3.10
-- JupyterLab 3.5 with extensions
+- JupyterLab 3.6 with extensions
 
 Python packages:
-- Beautiful Soup 4.11
-- Gower 0.1.2
-- Keras 2.11
+- Beautiful Soup 4.12
+- Gower 0.1
+- Keras 2.12
 - LIME 0.2
-- Matplotlib 3.6
+- Matplotlib 3.7
 - NLTK 3.8
-- Numpy 1.21
-- Pandas 1.5
-- Prince 0.7  
-- Requests 2.28
-- SciPy 1.10
+- Numpy 1.24
+- Pandas 2.0
+- Prince 0.10
+- Requests 2.31
 - Scikit-learn 1.2
-- Scrapy 2.7
+- SciPy 1.10
+- Scrapy 2.9
 - Seaborn 0.12
 - SHAP 0.41
-- spaCy 3.4
-- StatsModels 0.13
+- spaCy 3.5
+- StatsModels 0.14
 
 ### Zoose Neo4j
 Zoose Neo4j includes everything from Zoose Base as well as:
@@ -61,28 +62,36 @@ Zoose Neo4j includes everything from Zoose Base as well as:
 ### Zoose PyTorch
 Zoose PyTorch includes everything from Zoose Base as well as:
 - Captum 0.6
-- PyTorch 1.13
-- PyTorch Audio 0.13 (CPU)
-- PyTorch Text 0.14 (CPU)
-- PyTorch Vision 0.14 (CPU)
-- Transformers 4.25
+- PyTorch 2.0
+- PyTorch Audio 2.0 (CPU)
+- PyTorch Text 0.15 (CPU)
+- PyTorch Vision 0.15 (CPU)
+- Transformers 4.29
 
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:
-- Amazon Braket SDK 1.35
+- Amazon Braket SDK 1.41
 - Cirq 1.1
-- cuQuantum 22.11
+- cuQuantum 23.3
 - OpenFermion 1.5
-- PennyLane 0.27 with plugins for Cirq, Stawberry Fields, Qiskit
-- pytket 1.10
-- Qiskit 0.39
+- PennyLane 0.30 with plugins for Cirq, Stawberry Fields, Qiskit
+- pytket 1.15
+- Qiskit 0.43
 - QuTiP 4.7
 - Strawberry Fields 0.23
+
+### Zoose Geo
+Zoose Geo includes everything from Zoose Base as well as:
+- Geopandas 0.13
+- h5py 3.8
+- netCDF4 1.6
+- xarray 2023.5
+- zarr 2.14
 
 # How to use?
 Execute `./zoose.sh`, which launches a Jupyter notebooks session.
 By default it launches Zoose Base.
-If you want Neo4j or Quantum, just use `./zoose.sh neo4j` or `./zoose.sh quantum` instead.
+If you want Neo4j, Geo, or Quantum, just use `./zoose.sh neo4j`, `./zoose.sh geo`, or `./zoose.sh quantum` instead.
 
 Please use the link from the command line to access it, as it requires a token.
 

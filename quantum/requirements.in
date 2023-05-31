@@ -1,13 +1,11 @@
 # See: base/requirements.txt
 -c requirements.txt
 
+# Due to issues with pip-compile and cirq (and openfermion), see Dockerfile for hack
 amazon-braket-sdk
 amazon-braket-pennylane-plugin
 amazon-braket-strawberryfields-plugin
-cirq
 cuquantum
-openfermion
-pennylane-cirq
 pennylane-qiskit
 pennylane-sf
 pennylane
