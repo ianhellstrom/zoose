@@ -55,4 +55,17 @@ services:
       dockerfile: Dockerfile
       args:
         BASE: "${PREFIX}-quantum:${TAG}"
-  
+  geo:
+    image: "${PREFIX}-geo:${TAG}"
+    build:
+      context: geo
+      dockerfile: Dockerfile
+      args:
+        BASE: "${BASE}:${TAG}"
+  geo-gitpod:
+    image: "${PREFIX}-geo-gitpod:${TAG}"
+    build:
+      context: gitpod
+      dockerfile: Dockerfile
+      args:
+        BASE: "${PREFIX}-geo:${TAG}"

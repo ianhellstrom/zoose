@@ -1,3 +1,2 @@
-# Because of Cirq 1.0.0
-attrs<21.0.0,>=20.1.0
-pydantic==1.9.0
+# Because of quantum libraries
+networkx==2.8.8
