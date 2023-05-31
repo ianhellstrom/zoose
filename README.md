@@ -32,26 +32,26 @@ In Gitpod, you have two options for Zoose notebooks:
 
 ### Zoose Base
 - Python 3.10
-- JupyterLab 3.5 with extensions
+- JupyterLab 3.6 with extensions
 
 Python packages:
-- Beautiful Soup 4.11
-- Gower 0.1.2
-- Keras 2.11
+- Beautiful Soup 4.12
+- Gower 0.1
+- Keras 2.12
 - LIME 0.2
-- Matplotlib 3.6
+- Matplotlib 3.7
 - NLTK 3.8
-- Numpy 1.21
-- Pandas 1.5
-- Prince 0.7  
-- Requests 2.28
-- SciPy 1.10
+- Numpy 1.24
+- Pandas 2.0
+- Prince 0.10
+- Requests 2.31
 - Scikit-learn 1.2
-- Scrapy 2.7
+- SciPy 1.10
+- Scrapy 2.9
 - Seaborn 0.12
 - SHAP 0.41
-- spaCy 3.4
-- StatsModels 0.13
+- spaCy 3.5
+- StatsModels 0.14
 
 ### Zoose Neo4j
 Zoose Neo4j includes everything from Zoose Base as well as:
@@ -61,23 +61,31 @@ Zoose Neo4j includes everything from Zoose Base as well as:
 ### Zoose PyTorch
 Zoose PyTorch includes everything from Zoose Base as well as:
 - Captum 0.6
-- PyTorch 1.13
-- PyTorch Audio 0.13 (CPU)
-- PyTorch Text 0.14 (CPU)
-- PyTorch Vision 0.14 (CPU)
-- Transformers 4.25
+- PyTorch 2.0
+- PyTorch Audio 2.0 (CPU)
+- PyTorch Text 0.15 (CPU)
+- PyTorch Vision 0.15 (CPU)
+- Transformers 4.29
 
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:
-- Amazon Braket SDK 1.35
+- Amazon Braket SDK 1.41
 - Cirq 1.1
-- cuQuantum 22.11
+- cuQuantum 23.3
 - OpenFermion 1.5
-- PennyLane 0.27 with plugins for Cirq, Stawberry Fields, Qiskit
-- pytket 1.10
-- Qiskit 0.39
+- PennyLane 0.30 with plugins for Cirq, Stawberry Fields, Qiskit
+- pytket 1.15
+- Qiskit 0.43
 - QuTiP 4.7
 - Strawberry Fields 0.23
+
+### Zoose Geo
+Zoose Geo includes everything from Zoose Base as well as:
+- Geopandas 0.13
+- h5py 3.8
+- netCDF4 1.6
+- xarray 2023.5
+- zarr 2.14
 
 # How to use?
 Execute `./zoose.sh`, which launches a Jupyter notebooks session.
