@@ -83,6 +83,7 @@ Zoose Quantum includes everything from Zoose Base as well as:
 ### Zoose Geo
 Zoose Geo includes everything from Zoose Base as well as:
 - Geopandas 0.13
+- Geoplot 0.5
 - h5py 3.8
 - netCDF4 1.6
 - xarray 2023.5
