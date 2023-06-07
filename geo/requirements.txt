@@ -1,5 +1,6 @@
 gdal==3.4.1
 geopandas==0.13.0
+geoplot==0.5.1
 h5py==3.8.0
 netCDF4==1.6.3
 xarray==2023.5.0
