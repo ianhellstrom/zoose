@@ -8,5 +8,7 @@ pennylane==0.30.0
 pytket==1.15.0
 qiskit==0.43.0
 qiskit[visualization]
+qiskit[nature]
+qiskit-nature-pyscf
 qutip==4.7.1
 strawberryfields==0.23.0
