@@ -53,11 +53,12 @@ Python packages:
 - SHAP 0.41
 - spaCy 3.5
 - StatsModels 0.14
+- thefuzz 0.20
 
 ### Zoose Neo4j
 Zoose Neo4j includes everything from Zoose Base as well as:
 - Neo4j Community Edition 4.4
-- py2neo 2021.2.3
+- py2neo 2021.2.4
 
 ### Zoose PyTorch
 Zoose PyTorch includes everything from Zoose Base as well as:
