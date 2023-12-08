@@ -32,5 +32,6 @@ seaborn
 shap
 spacy
 statsmodels
+thefuzz
 tikzplotlib
 tqdm
