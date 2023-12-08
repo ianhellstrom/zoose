@@ -540,6 +540,8 @@ pyzmq==25.1.0
     #   notebook
 queuelib==1.6.2
     # via scrapy
+rapidfuzz==3.5.2
+    # via thefuzz
 regex==2023.5.5
     # via nltk
 requests==2.31.0
@@ -639,6 +641,8 @@ terminado==0.17.1
     #   jupyter-server-terminals
     #   nbclassic
     #   notebook
+thefuzz==0.20.0
+    # via -r /app/reqs/requirements.in
 thinc==8.1.10
     # via spacy
 threadpoolctl==3.1.0
