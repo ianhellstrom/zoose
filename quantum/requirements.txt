@@ -1,17 +1,422 @@
-amazon-braket-sdk==1.41.0
-amazon-braket-pennylane-plugin==1.16.0
+amazon-braket-default-simulator==1.26.0
+    # via amazon-braket-sdk
+amazon-braket-pennylane-plugin==1.28.0
+    # via -r /app/reqs/quantum.in
+amazon-braket-schemas==1.22.0
+    # via
+    #   amazon-braket-default-simulator
+    #   amazon-braket-sdk
+amazon-braket-sdk==1.57.2
+    # via
+    #   -r /app/reqs/quantum.in
+    #   amazon-braket-pennylane-plugin
+    #   amazon-braket-strawberryfields-plugin
 amazon-braket-strawberryfields-plugin==1.1.0.post1
-cuquantum==23.3.0
-pennylane-qiskit==0.30.1
+    # via -r /app/reqs/quantum.in
+annotated-types==0.7.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   pydantic
+antlr4-python3-runtime==4.9.2
+    # via
+    #   amazon-braket-default-simulator
+    #   openpulse
+    #   openqasm3
+    #   quantum-blackbird
+appdirs==1.4.4
+    # via
+    #   pennylane
+    #   xanadu-cloud-client
+autograd==1.7.0
+    # via pennylane
+autoray==0.6.12
+    # via
+    #   amazon-braket-pennylane-plugin
+    #   pennylane
+backoff==2.2.1
+    # via amazon-braket-sdk
+boltons==24.0.0
+    # via amazon-braket-sdk
+boto3==1.35.11
+    # via amazon-braket-sdk
+botocore==1.35.11
+    # via
+    #   boto3
+    #   s3transfer
+cachetools==5.5.0
+    # via pennylane
+certifi==2024.8.30
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   requests
+cffi==1.17.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   cryptography
+charset-normalizer==3.3.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   requests
+click==8.1.7
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   dask
+cloudpickle==3.0.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   dask
+contourpy==1.3.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+cryptography==43.0.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   pyspnego
+    #   requests-ntlm
+cycler==0.12.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+dask==2024.8.2
+    # via thewalrus
+dill==0.3.8
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   qiskit
+fire==0.6.0
+    # via xanadu-cloud-client
+fonttools==4.53.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+fsspec==2024.9.0
+    # via dask
+graphviz==0.20.3
+    # via pytket
+ibm-cloud-sdk-core==3.20.6
+    # via ibm-platform-services
+ibm-platform-services==0.57.0
+    # via qiskit-ibm-runtime
+idna==3.8
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   requests
+jinja2==3.1.4
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   pytket
+jmespath==1.0.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   boto3
+    #   botocore
+kiwisolver==1.4.7
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+lark==1.2.2
+    # via pytket
+lark-parser==0.12.0
+    # via quantum-xir
+llvmlite==0.43.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   numba
+locket==1.0.0
+    # via partd
+markupsafe==2.1.5
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   jinja2
+matplotlib==3.9.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   qiskit
+    #   seaborn
+mpmath==1.3.0
+    # via sympy
+mypy-extensions==1.0.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   oqpy
+nest-asyncio==1.6.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   amazon-braket-sdk
+networkx==3.3
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   amazon-braket-sdk
+    #   pennylane
+    #   pennylane-qiskit
+    #   pytket
+    #   quantum-blackbird
+    #   strawberryfields
+numba==0.60.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   strawberryfields
+    #   thewalrus
+numpy==1.26.4
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   amazon-braket-default-simulator
+    #   amazon-braket-sdk
+    #   autograd
+    #   contourpy
+    #   matplotlib
+    #   numba
+    #   opt-einsum
+    #   oqpy
+    #   pandas
+    #   pennylane
+    #   pennylane-qiskit
+    #   pytket
+    #   qiskit
+    #   qiskit-aer
+    #   qiskit-ibm-provider
+    #   qiskit-ibm-runtime
+    #   quantum-blackbird
+    #   qutip
+    #   rustworkx
+    #   scipy
+    #   seaborn
+    #   strawberryfields
+    #   thewalrus
+    #   xanadu-cloud-client
+openpulse==0.4.2
+    # via
+    #   amazon-braket-sdk
+    #   oqpy
+openqasm3==0.4.0
+    # via
+    #   amazon-braket-sdk
+    #   openpulse
+opt-einsum==3.3.0
+    # via amazon-braket-default-simulator
+oqpy==0.2.1
+    # via amazon-braket-sdk
+packaging==24.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   dask
+    #   matplotlib
+    #   pennylane
+    #   qutip
+pandas==2.2.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   seaborn
+partd==1.4.2
+    # via dask
+pbr==6.1.0
+    # via stevedore
+pennylane==0.38.0
+    # via
+    #   -r /app/reqs/quantum.in
+    #   amazon-braket-pennylane-plugin
+    #   pennylane-lightning
+    #   pennylane-qiskit
+    #   pennylane-sf
+pennylane-lightning==0.38.0
+    # via pennylane
+pennylane-qiskit==0.38.0
+    # via -r /app/reqs/quantum.in
 pennylane-sf==0.29.0
-pennylane==0.30.0
-pytket==1.15.0
-qiskit==0.43.0
-qiskit[finance]
-qiskit[machine-learning]
-qiskit[nature]
-qiskit[optimization]
-qiskit[visualization]
-qiskit-nature-pyscf
-qutip==4.7.1
+    # via -r /app/reqs/quantum.in
+pillow==10.4.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+    #   qiskit
+psutil==6.0.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   qiskit-aer
+pycparser==2.22
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   cffi
+pydantic==2.8.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   amazon-braket-default-simulator
+    #   amazon-braket-schemas
+    #   pydantic-settings
+    #   qiskit-ibm-runtime
+    #   xanadu-cloud-client
+pydantic-core==2.20.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   pydantic
+pydantic-settings==2.4.0
+    # via xanadu-cloud-client
+pydot==3.0.1
+    # via qiskit
+pyjwt==2.9.0
+    # via ibm-cloud-sdk-core
+pylatexenc==2.10
+    # via qiskit
+pyparsing==3.1.4
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   matplotlib
+    #   pydot
+pyspnego==0.11.1
+    # via requests-ntlm
+python-dateutil==2.9.0.post0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   botocore
+    #   ibm-cloud-sdk-core
+    #   matplotlib
+    #   pandas
+    #   qiskit
+    #   qiskit-ibm-provider
+    #   qiskit-ibm-runtime
+    #   strawberryfields
+    #   xanadu-cloud-client
+python-dotenv==1.0.1
+    # via
+    #   pydantic-settings
+    #   xanadu-cloud-client
+pytket==1.32.0
+    # via -r /app/reqs/quantum.in
+pytz==2024.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   pandas
+pyyaml==6.0.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   dask
+qiskit==1.2.0
+    # via
+    #   -r /app/reqs/quantum.in
+    #   pennylane-qiskit
+    #   qiskit-aer
+    #   qiskit-ibm-provider
+    #   qiskit-ibm-runtime
+qiskit-aer==0.15.0
+    # via pennylane-qiskit
+qiskit-ibm-provider==0.11.0
+    # via pennylane-qiskit
+qiskit-ibm-runtime==0.28.0
+    # via pennylane-qiskit
+quantum-blackbird==0.5.0
+    # via strawberryfields
+quantum-xir==0.2.2
+    # via strawberryfields
+qutip==5.0.4
+    # via -r /app/reqs/quantum.in
+qwasm==1.0.1
+    # via pytket
+requests==2.32.3
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   ibm-cloud-sdk-core
+    #   pennylane
+    #   qiskit-ibm-provider
+    #   qiskit-ibm-runtime
+    #   requests-ntlm
+    #   strawberryfields
+    #   xanadu-cloud-client
+requests-ntlm==1.3.0
+    # via
+    #   qiskit-ibm-provider
+    #   qiskit-ibm-runtime
+rustworkx==0.15.1
+    # via
+    #   pennylane
+    #   qiskit
+s3transfer==0.10.2
+    # via boto3
+scipy==1.14.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   amazon-braket-default-simulator
+    #   pennylane
+    #   pytket
+    #   qiskit
+    #   qiskit-aer
+    #   qutip
+    #   strawberryfields
+    #   thewalrus
+seaborn==0.13.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   qiskit
+six==1.16.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   fire
+    #   python-dateutil
+stevedore==5.3.0
+    # via qiskit
 strawberryfields==0.23.0
+    # via
+    #   -r /app/reqs/quantum.in
+    #   amazon-braket-strawberryfields-plugin
+    #   pennylane-sf
+symengine==0.11.0
+    # via qiskit
+sympy==1.12.1
+    # via
+    #   amazon-braket-default-simulator
+    #   amazon-braket-sdk
+    #   pennylane-qiskit
+    #   pytket
+    #   qiskit
+    #   quantum-blackbird
+    #   strawberryfields
+    #   thewalrus
+termcolor==2.4.0
+    # via fire
+thewalrus==0.21.0
+    # via strawberryfields
+toml==0.10.2
+    # via
+    #   pennylane
+    #   strawberryfields
+toolz==0.12.1
+    # via
+    #   dask
+    #   partd
+typing-extensions==4.12.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   pennylane
+    #   pydantic
+    #   pydantic-core
+    #   pytket
+    #   qiskit
+    #   qiskit-ibm-provider
+tzdata==2024.1
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   pandas
+urllib3==2.2.2
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   botocore
+    #   ibm-cloud-sdk-core
+    #   qiskit-ibm-provider
+    #   qiskit-ibm-runtime
+    #   requests
+    #   strawberryfields
+websocket-client==1.8.0
+    # via
+    #   -c /app/reqs/requirements.txt
+    #   qiskit-ibm-provider
+    #   qiskit-ibm-runtime
+websockets==13.0.1
+    # via qiskit-ibm-provider
+xanadu-cloud-client==0.3.2
+    # via strawberryfields
+
+# The following packages are considered to be unsafe in a requirements file:
+setuptools==74.1.1
+    # via
+    #   amazon-braket-sdk
+    #   qwasm

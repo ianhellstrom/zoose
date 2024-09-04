@@ -1,2 +1,2 @@
 # Because of quantum libraries
-networkx==2.8.8
+# networkx==2.8.8

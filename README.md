@@ -32,7 +32,7 @@ In Gitpod, you have two options for Zoose notebooks:
 2. JupyterLab, which you can start from the Gitpod workspace terminal with `/jupyter.sh`.
 
 ### Zoose Base
-- Python 3.10
+- Python 3.12
 - JupyterLab 3.6 with extensions
 
 Python packages:
@@ -57,7 +57,7 @@ Python packages:
 
 ### Zoose Neo4j
 Zoose Neo4j includes everything from Zoose Base as well as:
-- Neo4j Community Edition 4.4
+- Neo4j Community Edition 5.12
 - py2neo 2021.2.4
 
 ### Zoose PyTorch
@@ -73,7 +73,6 @@ Zoose PyTorch includes everything from Zoose Base as well as:
 Zoose Quantum includes everything from Zoose Base as well as:
 - Amazon Braket SDK 1.41
 - Cirq 1.1
-- cuQuantum 23.3
 - OpenFermion 1.5
 - PennyLane 0.30 with plugins for Cirq, Stawberry Fields, Qiskit
 - pytket 1.15

@@ -5,7 +5,6 @@
 amazon-braket-sdk
 amazon-braket-pennylane-plugin
 amazon-braket-strawberryfields-plugin
-cuquantum
 pennylane-qiskit
 pennylane-sf
 pennylane
