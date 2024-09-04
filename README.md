@@ -72,8 +72,8 @@ Zoose PyTorch includes everything from Zoose Base as well as:
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:
 - Amazon Braket SDK 1.57
-- Cirq 1.1
-- OpenFermion 1.5
+- Cirq 1.4
+- OpenFermion 1.6
 - PennyLane 0.38 with plugins for Cirq, Stawberry Fields, Qiskit
 - pytket 1.32
 - Qiskit 1.2
