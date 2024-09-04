@@ -1,6 +1,7 @@
+version: '2'
 services:
   base:
-    image: "${BASE}:${TAG}"
+    image: "${BASE}"
     build:
       context: base
       dockerfile: Dockerfile
@@ -9,62 +10,78 @@ services:
     ports:
       - "8888:8888"
   base-gitpod:
-    image: "${PREFIX}-base-gitpod:${TAG}"
+    image: "${PREFIX}-base-gitpod"
     build:
       context: gitpod
       dockerfile: Dockerfile
       args:
-        BASE: "${BASE}:${TAG}"
+        BASE: "${BASE}"
+    depends_on:
+      - base
   neo4j:
-    image: "${PREFIX}-neo4j:${TAG}"
+    image: "${PREFIX}-neo4j"
     build:
       context: neo4j
       dockerfile: Dockerfile
       args:
-        BASE: "${BASE}:${TAG}"
+        BASE: "${BASE}"
+    depends_on:
+      - base
     ports:
       - "7473:7373"
       - "7474:7474"
       - "7687:7686"
   pytorch:
-    image: "${PREFIX}-pytorch:${TAG}"
+    image: "${PREFIX}-pytorch"
     build:
       context: pytorch
       dockerfile: Dockerfile
       args:
-        BASE: "${BASE}:${TAG}"
+        BASE: "${BASE}"
+    depends_on:
+      - base
   pytorch-gitpod:
-    image: "${PREFIX}-pytorch-gitpod:${TAG}"
+    image: "${PREFIX}-pytorch-gitpod"
     build:
       context: gitpod
       dockerfile: Dockerfile
       args:
-        BASE: "${PREFIX}-pytorch:${TAG}"
+        BASE: "${PREFIX}-pytorch"
+    depends_on:
+      - base
   quantum:
     image: "${PREFIX}-quantum:${TAG}"
     build:
       context: quantum
       dockerfile: Dockerfile
       args:
-        BASE: "${BASE}:${TAG}"
+        BASE: "${BASE}"
+    depends_on:
+      - base
   quantum-gitpod:
-    image: "${PREFIX}-quantum-gitpod:${TAG}"
+    image: "${PREFIX}-quantum-gitpod"
     build:
       context: gitpod
       dockerfile: Dockerfile
       args:
-        BASE: "${PREFIX}-quantum:${TAG}"
+        BASE: "${PREFIX}-quantum"
+    depends_on:
+      - base
   geo:
-    image: "${PREFIX}-geo:${TAG}"
+    image: "${PREFIX}-geo"
     build:
       context: geo
       dockerfile: Dockerfile
       args:
-        BASE: "${BASE}:${TAG}"
+        BASE: "${BASE}"
+    depends_on:
+      - base
   geo-gitpod:
-    image: "${PREFIX}-geo-gitpod:${TAG}"
+    image: "${PREFIX}-geo-gitpod"
     build:
       context: gitpod
       dockerfile: Dockerfile
       args:
-        BASE: "${PREFIX}-geo:${TAG}"
+        BASE: "${PREFIX}-geo"
+    depends_on:
+      - base

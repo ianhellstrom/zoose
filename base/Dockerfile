@@ -23,7 +23,6 @@ RUN apt-get update && apt-get -y upgrade && \
         openjdk-11-jre \
         python${PYTHON_VERSION} \
         python${PYTHON_VERSION}-dev \
-        python${PYTHON_VERSION}-distutils \
         libzmq3-dev \
         libcurl4-openssl-dev \
         libssl-dev \
