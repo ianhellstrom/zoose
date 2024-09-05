@@ -1,30 +1,23 @@
-version: '2'
 services:
   base:
-    image: "${BASE}"
+    image: "databaseline/zoose-base"
     build:
       context: base
       dockerfile: Dockerfile
-      args:
-        SOURCE: "ubuntu:24.04"
     ports:
       - "8888:8888"
   base-gitpod:
-    image: "${PREFIX}-base-gitpod"
+    image: "databaseline/zoose-base-gitpod"
     build:
       context: gitpod
       dockerfile: Dockerfile
-      args:
-        BASE: "${BASE}"
     depends_on:
       - base
   neo4j:
-    image: "${PREFIX}-neo4j"
+    image: "databaseline/zoose-neo4j"
     build:
       context: neo4j
       dockerfile: Dockerfile
-      args:
-        BASE: "${BASE}"
     depends_on:
       - base
     ports:
@@ -32,56 +25,44 @@ services:
       - "7474:7474"
       - "7687:7686"
   pytorch:
-    image: "${PREFIX}-pytorch"
+    image: "databaseline/zoose-pytorch"
     build:
       context: pytorch
       dockerfile: Dockerfile
-      args:
-        BASE: "${BASE}"
     depends_on:
       - base
   pytorch-gitpod:
-    image: "${PREFIX}-pytorch-gitpod"
+    image: "databaseline/zoose-pytorch-gitpod"
     build:
       context: gitpod
       dockerfile: Dockerfile
-      args:
-        BASE: "${PREFIX}-pytorch"
     depends_on:
       - base
   quantum:
-    image: "${PREFIX}-quantum:${TAG}"
+    image: "databaseline/zoose-quantum"
     build:
       context: quantum
       dockerfile: Dockerfile
-      args:
-        BASE: "${BASE}"
     depends_on:
       - base
   quantum-gitpod:
-    image: "${PREFIX}-quantum-gitpod"
+    image: "databaseline/zoose-quantum-gitpod"
     build:
       context: gitpod
       dockerfile: Dockerfile
-      args:
-        BASE: "${PREFIX}-quantum"
     depends_on:
       - base
   geo:
-    image: "${PREFIX}-geo"
+    image: "databaseline/zoose-geo"
     build:
       context: geo
       dockerfile: Dockerfile
-      args:
-        BASE: "${BASE}"
     depends_on:
       - base
   geo-gitpod:
-    image: "${PREFIX}-geo-gitpod"
+    image: "databaseline/zoose-geo-gitpod"
     build:
       context: gitpod
       dockerfile: Dockerfile
-      args:
-        BASE: "${PREFIX}-geo"
     depends_on:
       - base

@@ -1,9 +1,8 @@
-ARG BASE
+FROM databaseline/zoose-base
 
-FROM ${BASE}
 LABEL org.opencontainers.image.authors="Ian Hellström" \
       org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
-      org.opencontainers.image.vendor="Databaseline"
+      org.opencontainers.image.vendor="ianhellstrom.org"
 
 WORKDIR /setup
 COPY requirements.txt /setup/requirements.txt
