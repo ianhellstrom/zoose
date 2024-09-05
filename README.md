@@ -57,7 +57,7 @@ Python packages:
 
 ### Zoose Neo4j
 Zoose Neo4j includes everything from Zoose Base as well as:
-- Neo4j Community Edition 5
+- Neo4j Community Edition 4.4
 - neomodel 5.3.2
 
 ### Zoose PyTorch
