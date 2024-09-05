@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.authors="Ian Hellström" \
 
 RUN set -o pipefail && \
     wget -q -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \
-    echo 'deb https://debian.neo4j.com stable 4' | tee -a /etc/apt/sources.list.d/neo4j.list && \
+    echo 'deb https://debian.neo4j.com stable 4.4' | tee -a /etc/apt/sources.list.d/neo4j.list && \
     apt-get update && apt-get install -y --no-install-recommends neo4j && \
     rm -rf /var/lib/apt/lists/*
 
