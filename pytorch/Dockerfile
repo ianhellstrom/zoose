@@ -7,6 +7,6 @@ LABEL org.opencontainers.image.authors="Ian Hellström" \
 
 WORKDIR /setup
 COPY requirements.txt /setup/requirements.txt
-RUN pip install --no-cache-dir -r /setup/requirements.txt
+RUN pip install --no-cache-dir --break-system-packages -r /setup/requirements.txt
 
 ENTRYPOINT ["/jupyter.sh"]

@@ -7,9 +7,9 @@ LABEL org.opencontainers.image.authors="Ian Hellström" \
 
 WORKDIR /setup
 COPY requirements.txt /setup/requirements.txt
-RUN pip install --no-cache-dir -r /setup/requirements.txt
+RUN pip install --no-cache-dir --break-system-packages -r /setup/requirements.txt
 
 # HACK for cirq and related libraries
-RUN pip install --no-cache-dir cirq openfermion pennylane-cirq
+RUN pip install --no-cache-dir --break-system-packages cirq openfermion pennylane-cirq
 
 ENTRYPOINT ["/jupyter.sh"]
