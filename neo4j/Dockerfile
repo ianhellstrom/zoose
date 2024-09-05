@@ -12,7 +12,6 @@ RUN set -o pipefail && \
 
 WORKDIR /setup
 COPY requirements.txt /setup/requirements.txt
-RUN source zoose/bin/activate
 RUN pip install --no-cache-dir -r /setup/requirements.txt
 
 COPY config/neo4j.conf /etc/neo4j/neo4j.conf
