@@ -1,11 +1,10 @@
-ARG SOURCE
+FROM ubuntu:24.04
 
-FROM ${SOURCE}
 LABEL org.opencontainers.image.authors="Ian Hellström" \
       org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
-      org.opencontainers.image.vendor="Databaseline"
+      org.opencontainers.image.vendor="ianhellstrom.org"
 
-ENV PYTHON_VERSION="3.10"
+ENV PYTHON_VERSION="3.12"
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG TZ="Europe/Berlin"
 
@@ -23,13 +22,10 @@ RUN apt-get update && apt-get -y upgrade && \
         openjdk-11-jre \
         python${PYTHON_VERSION} \
         python${PYTHON_VERSION}-dev \
-        python${PYTHON_VERSION}-distutils \
         libzmq3-dev \
         libcurl4-openssl-dev \
         libssl-dev \
         libopenblas0-pthread \
-        jupyter-core \
-        jupyter-client \
         git \
         sudo \
         libgdal-dev 
@@ -40,7 +36,7 @@ RUN add-apt-repository -y universe && apt-get update && \
 
 WORKDIR /setup
 COPY requirements.txt /setup/requirements.txt
-RUN pip install --no-cache-dir -r /setup/requirements.txt
+RUN pip install --no-cache-dir --break-system-packages --ignore-installed -r /setup/requirements.txt
 
 COPY dictionaries /usr/local/share/jupyter/dictionaries/
 COPY config/extensions.json /root/.jupyter/lab/user-settings/@jupyterlab/extensionmanager-extension/plugin.jupyterlab-settings

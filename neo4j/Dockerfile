@@ -1,9 +1,8 @@
-ARG BASE
+FROM databaseline/zoose-base
 
-FROM ${BASE}
 LABEL org.opencontainers.image.authors="Ian Hellström" \
       org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
-      org.opencontainers.image.vendor="Databaseline"
+      org.opencontainers.image.vendor="ianhellstrom.org"
 
 RUN set -o pipefail && \
     wget -q -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \
@@ -13,7 +12,7 @@ RUN set -o pipefail && \
 
 WORKDIR /setup
 COPY requirements.txt /setup/requirements.txt
-RUN pip install --no-cache-dir -r /setup/requirements.txt
+RUN pip install --no-cache-dir --break-system-packages -r /setup/requirements.txt
 
 COPY config/neo4j.conf /etc/neo4j/neo4j.conf
 

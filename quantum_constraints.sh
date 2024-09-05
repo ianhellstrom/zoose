@@ -15,4 +15,6 @@ docker run --rm -it \
     --strip-extras --no-header \
     --resolver=backtracking
 
+mv reqs/quantum.txt quantum/requirements.txt
+
 rm -rf reqs

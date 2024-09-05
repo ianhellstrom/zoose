@@ -32,65 +32,64 @@ In Gitpod, you have two options for Zoose notebooks:
 2. JupyterLab, which you can start from the Gitpod workspace terminal with `/jupyter.sh`.
 
 ### Zoose Base
-- Python 3.10
-- JupyterLab 3.6 with extensions
+- Python 3.12
+- JupyterLab 4.3 with extensions
 
 Python packages:
 - Beautiful Soup 4.12
 - Gower 0.1
-- Keras 2.12
+- Keras 3.5
 - LIME 0.2
-- Matplotlib 3.7
-- NLTK 3.8
-- Numpy 1.24
-- Pandas 2.0
-- Prince 0.10
-- Requests 2.31
-- Scikit-learn 1.2
-- SciPy 1.10
-- Scrapy 2.9
-- Seaborn 0.12
-- SHAP 0.41
-- spaCy 3.5
+- Matplotlib 3.9
+- NLTK 3.9
+- Numpy 1.26
+- Pandas 2.2
+- Prince 0.13
+- Requests 2.32
+- scikit-learn 1.5
+- SciPy 1.14
+- Scrapy 2.11
+- Seaborn 0.13
+- SHAP 0.46
+- spaCy 3.7
 - StatsModels 0.14
-- thefuzz 0.20
+- thefuzz 0.22
 
 ### Zoose Neo4j
 Zoose Neo4j includes everything from Zoose Base as well as:
 - Neo4j Community Edition 4.4
-- py2neo 2021.2.4
+- neomodel 5.3.2
 
 ### Zoose PyTorch
 Zoose PyTorch includes everything from Zoose Base as well as:
-- Captum 0.6
-- PyTorch 2.0
-- PyTorch Audio 2.0 (CPU)
-- PyTorch Text 0.15 (CPU)
-- PyTorch Vision 0.15 (CPU)
-- Transformers 4.29
+- Captum 0.7
+- PyTorch 2.4
+- PyTorch Audio 2.4 (CPU)
+- PyTorch Text 0.18 (CPU)
+- PyTorch Vision 0.19 (CPU)
+- Transformers 4.44
 
 ### Zoose Quantum
 Zoose Quantum includes everything from Zoose Base as well as:
-- Amazon Braket SDK 1.41
-- Cirq 1.1
-- cuQuantum 23.3
-- OpenFermion 1.5
-- PennyLane 0.30 with plugins for Cirq, Stawberry Fields, Qiskit
-- pytket 1.15
-- Qiskit 0.43
-- QuTiP 4.7
+- Amazon Braket SDK 1.57
+- Cirq 1.4
+- OpenFermion 1.6
+- PennyLane 0.38 with plugins for Cirq, Stawberry Fields, Qiskit
+- pytket 1.32
+- Qiskit 1.2
+- QuTiP 5.0
 - Strawberry Fields 0.23
 
 ### Zoose Geo
 Zoose Geo includes everything from Zoose Base as well as:
-- Geopandas 0.13
+- Geopandas 1.0
 - Geoplot 0.5
 - h3 3.7
-- h5py 3.8
-- netCDF4 1.6
+- h5py 3.11
+- netCDF4 1.7
 - shapely 2.0
-- xarray 2023.5
-- zarr 2.14
+- xarray 2024.9
+- zarr 2.18
 
 # How to use?
 Execute `./zoose.sh`, which launches a Jupyter notebooks session.

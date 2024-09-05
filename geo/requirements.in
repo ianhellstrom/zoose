@@ -1,0 +1,12 @@
+# See: base/requirements.txt
+-c requirements.txt
+
+# gdal in Dockerfile
+geopandas
+geoplot
+h3
+h5py
+netCDF4
+shapely
+xarray
+zarr

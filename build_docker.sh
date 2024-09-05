@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose up --build --detach --remove-orphans
+docker compose build --parallel
