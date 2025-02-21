@@ -1,8 +1,8 @@
 FROM databaseline/zoose-base
 
-LABEL org.opencontainers.image.authors="Ian Hellström" \
-      org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
-      org.opencontainers.image.vendor="ianhellstrom.org"
+LABEL org.opencontainers.image.authors="Ian Reppel" \
+      org.opencontainers.image.source="https://github.com/ianreppel/zoose" \
+      org.opencontainers.image.vendor="ianreppel.org"
 
 RUN set -o pipefail && \
     wget -q -O - https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \

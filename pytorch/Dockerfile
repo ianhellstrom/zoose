@@ -1,7 +1,7 @@
 FROM databaseline/zoose-base
 
-LABEL org.opencontainers.image.authors="Ian Hellström" \
-      org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
+LABEL org.opencontainers.image.authors="Ian Reppel" \
+      org.opencontainers.image.source="https://github.com/ianreppel/zoose" \
       org.opencontainers.image.vendor="Databaseline"
 
 WORKDIR /setup

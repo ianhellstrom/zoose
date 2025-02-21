@@ -1,5 +1,5 @@
-[![Master CI](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml/badge.svg)](https://github.com/ianhellstrom/zoose/actions/workflows/merge.yml)
-[![PR CI](https://github.com/ianhellstrom/zoose/actions/workflows/pull.yml/badge.svg)](https://github.com/ianhellstrom/zoose/actions/workflows/pull.yml)
+[![Master CI](https://github.com/ianreppel/zoose/actions/workflows/merge.yml/badge.svg)](https://github.com/ianianreppelose/actions/workflows/merge.yml)
+[![PR CI](https://github.com/ianreppel/zoose/actions/workflows/pull.yml/badge.svg)](https://github.com/ianianreppelose/actions/workflows/pull.yml)
 
 # What is Zoose?
 
@@ -15,7 +15,7 @@ easier: no need for virtual environments and brittle configurations that break o
 Zoose comes in a few flavours: `base`, `neo4j`, `pytorch`, `quantum`, and `geo`.
 What is included in `base` is always included in the rest, too.
 
-You can run these flavours directly in VSCode from your browser with [GitHub Codespaces](https://github.com/ianhellstrom/zoose-codespace/).
+You can run these flavours directly in VSCode from your browser with [GitHub Codespaces](https://github.com/ianreppelR/zoose-codespace/).
 Only two clicks to spin up an IDE or notebook with all packages installed and ready!
 
 ### Special flavours
@@ -25,7 +25,7 @@ There are also several special flavours suitable for use with [Gitpod](https://g
 - `quantum-gitpod`
 - `geo-gitpod`
 
-To get started with these special flavours for Gitpod, please use the [template](https://github.com/ianhellstrom/zoose-gitpod) to create a repository that you use to spin up a [workspace](https://www.gitpod.io/docs/introduction/getting-started) from that repo.
+To get started with these special flavours for Gitpod, please use the [template](https://github.com/ianrepp/zoose-gitpod) to create a repository that you use to spin up a [workspace](https://www.gitpod.io/docs/introduction/getting-started) from that repo.
 
 In Gitpod, you have two options for Zoose notebooks:
 1. A VSCode experience
@@ -134,7 +134,7 @@ Just make sure you ignore `.qiskit` and do not share your API token in a git rep
 # Neo4j
 Zoose also kicks off a [Neo4j](https://neo4j.com) web server. 
 The UI is available at [localhost:7474](https://127.0.0.1:7474).
-Please check out [this value stream example](https://ianhellstrom.org/mapping-a-value-stream-in-neo4j/)
+Please check out [this value stream example](https://Reppel.org/mapping-a-value-stream-in-neo4j/)
 to learn more about Neo4j and Cypher.
 
 If you use Neo4j, please ensure that your Docker container has at least 6 GB of RAM allocated.

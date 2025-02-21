@@ -1,8 +1,8 @@
 FROM ubuntu:24.04
 
-LABEL org.opencontainers.image.authors="Ian Hellström" \
-      org.opencontainers.image.source="https://github.com/ianhellstrom/zoose" \
-      org.opencontainers.image.vendor="ianhellstrom.org"
+LABEL org.opencontainers.image.authors="Ian Reppel" \
+      org.opencontainers.image.source="https://github.com/ianreppel/zoose" \
+      org.opencontainers.image.vendor="ianreppel.org"
 
 ENV PYTHON_VERSION="3.12"
 ARG DEBIAN_FRONTEND="noninteractive"
